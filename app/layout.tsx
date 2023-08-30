@@ -1,11 +1,12 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Rubik } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 
 // components
 import NavBar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,9 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={rubik.className}>
-        <NavBar />
+      <body className={nunitoSans.className}>
+        {/* <NavBar /> */}
         {children}
+        <Footer />
       </body>
     </html>
   );

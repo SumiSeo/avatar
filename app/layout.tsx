@@ -1,4 +1,3 @@
-import "./styles/globals.scss";
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 

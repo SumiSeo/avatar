@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  bottom: 0;
+  z-index: 100;
+  font-size: 1.4rem;
+  &__box {
+    padding: 2.5rem 2rem;
+  }
+  &__link {
+    color: white;
+    text-decoration: underline;
+  }
+}

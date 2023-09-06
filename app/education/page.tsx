@@ -1,4 +1,3 @@
-const Education = (): JSX.Element => {
+export default function Education(): JSX.Element {
   return <div>education </div>;
-};
-export default Education;
+}

@@ -1,13 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
-import styles from "../styles/components/NavBar.module.scss";
+import styles from "../styles/components/Navbar.module.scss";
 
 export default function NavBar(): JSX.Element {
   return (
     <nav className={styles.nav}>
       <div className={styles.nav__box}>
         <Link className={styles.nav__link} href="/">
-          Sumi
+          S u m i
         </Link>
       </div>
       <div className={styles.nav__box}>

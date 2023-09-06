@@ -1,3 +1,7 @@
 export default function Education(): JSX.Element {
-  return <div>education </div>;
+  return (
+    <main>
+      <div>TEST</div>
+    </main>
+  );
 }

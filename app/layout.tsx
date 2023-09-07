@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
+import "./styles/globals.scss";
 
 // components
 import NavBar from "./components/Navbar";

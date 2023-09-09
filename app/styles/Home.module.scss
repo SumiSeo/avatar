@@ -3,4 +3,12 @@
   font-size: 2rem;
   background-color: black;
   box-sizing: border-box;
+  color: white;
+  &__wrapper {
+    padding: 5rem 4rem;
+  }
+  &__container {
+    height: 100vh;
+    color: red;
+  }
 }

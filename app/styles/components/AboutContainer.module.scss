@@ -1,9 +1,14 @@
 .about {
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5rem 0;
+  padding: 10rem 0;
   &__container {
     &:first-child {
+      padding: 0 20rem;
       margin-bottom: 10rem;
-      padding: 15rem 20rem;
       h1 {
         font-weight: 300;
         font-size: 2.4rem;

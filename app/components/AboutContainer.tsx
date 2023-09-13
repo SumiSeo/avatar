@@ -22,6 +22,8 @@ export default function AboutContainer(): JSX.Element {
           <ContentBar />
           <ContentBar />
           <ContentBar />
+          <ContentBar />
+          <ContentBar />
         </div>
         <div className={styles.about__box}></div>
       </div>

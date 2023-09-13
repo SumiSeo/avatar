@@ -7,11 +7,10 @@
   }
   &__container {
     height: 100vh;
-    padding: 5rem 4rem;
+    padding: 0 4rem;
     color: red;
     &:nth-child(2) {
       background-color: white;
-      padding: 5rem 30rem;
     }
   }
 }

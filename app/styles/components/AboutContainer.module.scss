@@ -1,5 +1,19 @@
 .about {
   color: black;
   &__container {
+    &:first-child {
+      margin-bottom: 10rem;
+      padding: 15rem 20rem;
+      h1 {
+        font-weight: 300;
+        font-size: 2.4rem;
+        margin-bottom: 3rem;
+      }
+      h4 {
+        font-size: 4rem;
+        font-weight: 300;
+        line-height: 1.2;
+      }
+    }
   }
 }

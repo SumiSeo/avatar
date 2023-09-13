@@ -4,10 +4,14 @@
   box-sizing: border-box;
   color: white;
   &__wrapper {
-    padding: 5rem 4rem;
   }
   &__container {
     height: 100vh;
+    padding: 5rem 4rem;
     color: red;
+    &:nth-child(2) {
+      background-color: white;
+      padding: 5rem 30rem;
+    }
   }
 }

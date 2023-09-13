@@ -2,7 +2,7 @@ import styles from "./styles/Home.module.scss";
 
 //components
 import SkipBar from "./components/SkipBar";
-import ContentContainer from "./components/ContentContainer";
+import AboutContainer from "./components/AboutContainer";
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
           <SkipBar />
         </div>
         <div className={styles.home__container}>
-          <ContentContainer />
+          <AboutContainer />
         </div>
         <div className={styles.home__container}>3</div>
       </div>

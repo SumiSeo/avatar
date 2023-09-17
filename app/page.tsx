@@ -3,6 +3,7 @@ import styles from "./styles/Home.module.scss";
 //components
 import SkipBar from "./components/SkipBar";
 import AboutContainer from "./components/AboutContainer";
+import PresentationContainer from "./components/PresentationContainer";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
         <div className={styles.home__container}>
           <AboutContainer />
         </div>
-        <div className={styles.home__container}>3</div>
+        <div className={styles.home__container}>
+          <PresentationContainer />
+        </div>
       </div>
     </main>
   );

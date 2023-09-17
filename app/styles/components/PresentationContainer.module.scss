@@ -1,0 +1,22 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  height: 70rem;
+  width: 120rem;
+  background-color: red;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  &__container {
+    &:first-child {
+      background-color: blue;
+    }
+    &:nth-child(2) {
+      background-color: orange;
+    }
+    &:last-child {
+      background-color: yellow;
+    }
+  }
+  &__bar {
+  }
+}

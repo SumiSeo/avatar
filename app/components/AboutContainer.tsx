@@ -2,6 +2,7 @@ import styles from "../styles/components/AboutContainer.module.scss";
 
 //components
 import ContentBar from "./ContentBar";
+import Content from "./Content";
 
 export default function AboutContainer(): JSX.Element {
   return (
@@ -25,7 +26,9 @@ export default function AboutContainer(): JSX.Element {
           <ContentBar />
           <ContentBar />
         </div>
-        <div className={styles.about__box}></div>
+        <div className={styles.about__box}>
+          <Content />
+        </div>
       </div>
     </div>
   );

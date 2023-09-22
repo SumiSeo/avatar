@@ -1,3 +1,5 @@
+import styles from "../styles/components/Content.module.scss";
+
 export default function Content(): JSX.Element {
-  return <div>Content </div>;
+  return <div className={styles.content}>Content </div>;
 }

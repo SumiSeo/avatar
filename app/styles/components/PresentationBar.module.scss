@@ -1,6 +1,10 @@
 .bar {
   display: flex;
   margin-left: 5rem;
+
   &__link {
+    &:not(last-child) {
+      margin-right: 1rem;
+    }
   }
 }

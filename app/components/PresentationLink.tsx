@@ -1,9 +1,9 @@
 import styles from "../styles/components/PresentationLink.module.scss";
-export interface PropsTypes {
-  name: String;
-}
+import { PresentationLinkProps } from "../types/PresentationProps";
 
-export default function PresentationLink({ name }: PropsTypes): JSX.Element {
+export default function PresentationLink({
+  name,
+}: PresentationLinkProps): JSX.Element {
   return (
     <div className={styles.link}>
       <div className={styles.circle}></div>

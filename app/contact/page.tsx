@@ -1,4 +1,11 @@
 import styles from "../styles/Contact.module.scss";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Information",
+  description:
+    "Sumi SEO | Software Engineer | Machine learning | Biomedical Engineering",
+};
 
 export default function Contact() {
   return (

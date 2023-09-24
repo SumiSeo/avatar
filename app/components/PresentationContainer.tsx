@@ -1,5 +1,6 @@
 import styles from "../styles/components/PresentationContainer.module.scss";
-
+import Image from "next/image";
+import Test from "./test.png";
 //comp
 import PresentationBar from "./PresentationBar";
 import PresentationFooter from "./PresentationFooter";
@@ -10,7 +11,9 @@ export default function PresentationContainer(): JSX.Element {
       <div className={styles.presentation__container}>
         <PresentationBar />
       </div>
-      <div className={styles.presentation__container}></div>
+      <div className={styles.presentation__container}>
+        <Image src={Test} alt="test" width={70} />
+      </div>
       <div className={styles.presentation__container}>
         <PresentationFooter
           text="

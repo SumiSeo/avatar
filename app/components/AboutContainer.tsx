@@ -1,4 +1,6 @@
 import styles from "../styles/components/AboutContainer.module.scss";
+import Image from "next/image";
+import Light from "../../public/light.gif";
 
 //components
 import ContentBar from "./ContentBar";
@@ -14,7 +16,7 @@ export default function AboutContainer(): JSX.Element {
         <div className={styles.about__box}>
           <h4>
             Improving the user interface through an ergonomic approach as a
-            content creator and a software engineering expert
+            software development expert and a content creator
           </h4>
         </div>
       </div>

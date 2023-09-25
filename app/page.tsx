@@ -1,5 +1,6 @@
 import styles from "./styles/Home.module.scss";
-
+import Image from "next/image";
+import Light from "../public/light.gif";
 //components
 import SkipBar from "./components/SkipBar";
 import AboutContainer from "./components/AboutContainer";
@@ -14,6 +15,9 @@ export default function Home() {
         </div>
         <div className={styles.home__container}>
           <AboutContainer />
+          {/* <div>
+            <Image fill className={styles.test} src={Light} alt="light" />
+          </div> */}
         </div>
         <div className={styles.home__container}>
           <PresentationContainer />

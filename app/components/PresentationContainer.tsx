@@ -1,9 +1,9 @@
 import styles from "../styles/components/PresentationContainer.module.scss";
-import Image from "next/image";
-import Test from "./test.png";
+
 //comp
 import PresentationBar from "./PresentationBar";
 import PresentationFooter from "./PresentationFooter";
+import PresentationImg from "./PresentationImg";
 
 export default function PresentationContainer(): JSX.Element {
   return (
@@ -12,7 +12,7 @@ export default function PresentationContainer(): JSX.Element {
         <PresentationBar />
       </div>
       <div className={styles.presentation__container}>
-        <Image src={Test} alt="test" width={70} />
+        <PresentationImg />
       </div>
       <div className={styles.presentation__container}>
         <PresentationFooter

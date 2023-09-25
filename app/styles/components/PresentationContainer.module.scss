@@ -12,22 +12,24 @@
       position: absolute;
       z-index: 100;
       top: 1rem;
+      border-radius: 2rem;
     }
     &:nth-child(2) {
       background-color: orange;
       height: 100%;
       box-sizing: border-box;
+      border-radius: 2rem;
     }
     &:last-child {
       position: absolute;
       bottom: 3rem;
-      width: 50rem;
-      padding: 0 2rem;
-      margin-left: 1rem;
-      font-size: 2rem;
-      color: white;
+      width: 70rem;
+      margin-left: 4rem;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: black;
       z-index: 100;
-      background-color: black;
+      line-height: 3rem;
     }
   }
   &__bar {

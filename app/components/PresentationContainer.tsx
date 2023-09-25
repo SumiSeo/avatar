@@ -15,12 +15,12 @@ export default function PresentationContainer(): JSX.Element {
         <PresentationImg />
       </div>
       <div className={styles.presentation__container}>
-        <PresentationFooter
+        {/* <PresentationFooter
           text="
 Our Approach
 What's Next
 Brain-computer interfaces have the potential to change lives for the better. We want to bring this technology from the lab into peoples' homes."
-        />
+        /> */}
       </div>
     </div>
   );

@@ -13,8 +13,8 @@ export default function AboutContainer(): JSX.Element {
         </div>
         <div className={styles.about__box}>
           <h4>
-            Create a generalized brain interface to restore autonomy to those
-            with unmet medical needs today and unlock human potential tomorrow.
+            Improving the user interface through an ergonomic approach as a
+            content creator and a software engineering expert
           </h4>
         </div>
       </div>

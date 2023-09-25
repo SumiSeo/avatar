@@ -1,14 +1,19 @@
 import styles from "../styles/components/PresentationBar.module.scss";
+import { useState } from "react";
+
+//comp
 import PresentationLink from "./PresentationLink";
 
 export default function PresentationBar(): JSX.Element {
+  const [clicked, setClicked] = useState<boolean>(false);
+
   return (
     <div className={styles.bar}>
       <div className={styles.bar__link}>
-        <PresentationLink name="Potential Inpact" />
+        <PresentationLink name="AI-Concierge" />
       </div>
       <div className={styles.bar__link}>
-        <PresentationLink name="Who it's for" />
+        <PresentationLink name="Contacky" />
       </div>
       <div className={styles.bar__link}>
         <PresentationLink name="Our Approach" />

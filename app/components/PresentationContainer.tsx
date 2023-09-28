@@ -4,6 +4,7 @@ import styles from "../styles/components/PresentationContainer.module.scss";
 import PresentationBar from "./PresentationBar";
 import PresentationFooter from "./PresentationFooter";
 import PresentationImg from "./PresentationImg";
+import PresentationLists from "./PresentationLists";
 
 export default function PresentationContainer(): JSX.Element {
   return (
@@ -21,6 +22,7 @@ Our Approach
 What's Next
 Brain-computer interfaces have the potential to change lives for the better. We want to bring this technology from the lab into peoples' homes."
         /> */}
+        <PresentationLists />
       </div>
     </div>
   );

@@ -2,24 +2,52 @@
   "projects": [
     {
       "id": "1",
-      "title": "Fix the footer links please",
-      "body": "Lorem ipsum Triforce sit amet, Linkus Hyruleus tempus Ganondorf. Nunc ocarina sagittis quis Majoras Mask. Nulla in metus arcu. Suspendisse potenti. In vel mauris varius, consectetur Zora ipsum eget, Master Sword porttitor urna. Fusce elementum urna elit, eget eleifend velit consectetur eget. Integer vel lobortis ipsum, vitae auctor Ocarina of Time. Donec sed urna dapibus, interdum magna a, eleifend magna. Curabitur tincidunt enim a neque volutpat. Phasellus auctor magna vel nunc pretium, ut volutpat justo tristique. Pellentesque cursus convallis mauris, in tempus enim tincidunt vitae.",
-      "priority": "low",
-      "user_email": "mario@netninja.dev"
+      "title": "AI-Concierge",
+      "body": "Creation of a real-time dashboard to help hotel guests",
+      "stacks": ["React", "TypeScript", "GraphQL", "Hasura", "AWS"],
+      "clicked": "true",
+      "classification": "professional"
     },
     {
       "id": "2",
-      "title": "Add in a new stylesheet",
-      "body": "Lorem ipsum Triforce sit amet, Linkus Hyruleus tempus Ganondorf. Nunc ocarina sagittis quis Majoras Mask. Nulla in metus arcu. Suspendisse potenti. In vel mauris varius, consectetur Zora ipsum eget, Master Sword porttitor urna. Fusce elementum urna elit, eget eleifend velit consectetur eget. Integer vel lobortis ipsum, vitae auctor Ocarina of Time. Donec sed urna dapibus, interdum magna a, eleifend magna. Curabitur tincidunt enim a neque volutpat. Phasellus auctor magna vel nunc pretium, ut volutpat justo tristique. Pellentesque cursus convallis mauris, in tempus enim tincidunt vitae.",
+      "title": "Contacky",
+      "body": "Creation of contact application  to create, modify, and delete user data",
+      "stacks": ["React", "JavaScript", "SCSS"],
       "priority": "medium",
-      "user_email": "mario@netninja.dev"
+      "clicked": "false",
+      "classification": "personal"
     },
     {
       "id": "3",
-      "title": "Fix the footer links",
-      "body": "Lorem ipsum Triforce sit amet, Linkus Hyruleus tempus Ganondorf. Nunc ocarina sagittis quis Majoras Mask. Nulla in metus arcu. Suspendisse potenti. In vel mauris varius, consectetur Zora ipsum eget, Master Sword porttitor urna. Fusce elementum urna elit, eget eleifend velit consectetur eget. Integer vel lobortis ipsum, vitae auctor Ocarina of Time. Donec sed urna dapibus, interdum magna a, eleifend magna. Curabitur tincidunt enim a neque volutpat. Phasellus auctor magna vel nunc pretium, ut volutpat justo tristique. Pellentesque cursus convallis mauris, in tempus enim tincidunt vitae.",
-      "priority": "high",
-      "user_email": "peach@netninja.dev"
+      "title": "My Code!",
+      "body": "Creation my code editor to understand better javascript interpreter",
+      "stacks": ["React", "TypeScript", "Babel Compiler", "Monaco Editor"],
+      "clicked": "false",
+      "classification": "personal"
+    },
+    {
+      "id": "4",
+      "title": "Weather UP!",
+      "body": "Creation of a weather application in HTML, Vanilla JavaScript, and Rest API",
+      "stacks": ["HTML", "Vanilla JavaScript", "RestAPI"],
+      "clicked": "false",
+      "classification": "personal"
+    },
+    {
+      "id": "5",
+      "title": "Harry Potter Playground",
+      "body": " Creation of an application on the theme of Harry Potter",
+      "stacks": ["HTML", "Vanilla JavaScript"],
+      "clicked": "false",
+      "classification": "personal"
+    },
+    {
+      "id": "6",
+      "title": "Fluuent",
+      "body": "Creation of a medical application to manage patients with C# and Blazor framework",
+      "stacks": ["C#", "Blazor", "JavaScript"],
+      "clicked": "false",
+      "classification": "professional"
     }
   ]
 }

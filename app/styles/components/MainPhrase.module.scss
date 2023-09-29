@@ -42,7 +42,7 @@
     height: 5rem;
     border-radius: 5rem;
     border: 0.2rem #999999 solid;
-    animation: slideUp 0.2s forwards ease-in-out;
+    animation: slideUp 0.9s forwards ease-in-out;
     transform: translate(-50%, -50%);
     animation-delay: 1s;
     top: 90%;
@@ -52,7 +52,7 @@
     height: 5rem;
     border-radius: 5rem;
     border: 0.2rem #999999 solid;
-    animation: slideDown 0.2s forwards ease-in-out;
+    animation: slideDown 0.9s forwards ease-in-out;
     transform: translate(-50%, -50%);
     top: 10%;
     animation-delay: 1s;
@@ -73,7 +73,7 @@
 
 @keyframes slideUp {
   60% {
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -120%);
   }
   100% {
     transform: translate(-50%, -50%);
@@ -83,7 +83,7 @@
 
 @keyframes slideDown {
   60% {
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -10%);
   }
   100% {
     transform: translate(-50%, -50%);

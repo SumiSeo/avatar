@@ -6,14 +6,10 @@ export default function Footer(): JSX.Element {
     <div className={styles.skipBar}>
       <div className={styles.skipBar__box}>
         <Link className={styles.skipBar__link} href="/test">
-          up
+          Skip intro
         </Link>
       </div>
-      <div className={styles.skipBar__box}>
-        <Link className={styles.skipBar__link} href="/down">
-          down
-        </Link>
-      </div>
+      <div className={styles.skipBar__box}></div>
     </div>
   );
 }

@@ -22,8 +22,10 @@
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  opacity: 0;
   &:first-child {
     border: 0.2rem white solid;
+    animation: popin 0.7s forwards ease-in-out;
   }
   &:nth-child(2) {
     width: 8rem;
@@ -31,5 +33,19 @@
     border-radius: 8rem;
     border: 0.4rem #999999 solid;
     z-index: -1;
+    animation: popin 0.7s forwards ease-in-out;
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes popin {
+  60% {
+    transform: scale(0.7);
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translate(-50%, -50%);
   }
 }

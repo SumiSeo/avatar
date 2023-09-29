@@ -11,6 +11,8 @@ export default function MainPhrase(): JSX.Element {
       <div className={styles.phrase__container}>
         <div className={styles.circle}></div>
         <div className={styles.circle}></div>
+        <div className={styles.circle}></div>
+        <div className={styles.circle}></div>
       </div>
     </div>
   );

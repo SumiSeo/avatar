@@ -5,4 +5,23 @@
 
 .title {
   color: white;
+  span {
+    font-size: 2.1rem;
+    font-weight: 500;
+    &:hover {
+      color: transparent;
+    }
+  }
+}
+.phrase {
+  &__container {
+  }
+}
+
+.circle {
+  width: 2rem;
+  height: 2rem;
+  background-color: yellow;
+  border-radius: 1rem;
+  position: absolute;
 }

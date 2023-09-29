@@ -7,8 +7,9 @@
   box-sizing: border-box;
   position: absolute;
   right: 0;
-  padding: 4rem 3rem;
+  padding: 2rem 3rem;
   bottom: 0;
+  overflow: hidden;
   &__box {
   }
   &__link {

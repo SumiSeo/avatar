@@ -6,6 +6,7 @@
   &__wrapper {
   }
   &__container {
+    box-sizing: border-box;
     height: 100vh;
     padding: 0 4rem;
     color: red;

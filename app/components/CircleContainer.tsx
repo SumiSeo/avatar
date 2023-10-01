@@ -1,12 +1,13 @@
-import styles from "../styles/components/MainPhrase.module.scss";
+import styles from "../styles/components/CircleContainer.module.scss";
 
-export default function MainPhrase(): JSX.Element {
+//comp
+import MousePointerIcon from "./MousePointerIcon";
+
+export default function CircleContainer(): JSX.Element {
   return (
     <div className={styles.phrase}>
       <div className={styles.phrase__container}>
-        {/* <div className={styles.title}>
-          as a <span>Software Engineer</span>
-        </div> */}
+        <MousePointerIcon />
       </div>
       <div className={styles.phrase__container}>
         <div className={styles.circle}></div>

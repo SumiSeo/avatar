@@ -4,14 +4,14 @@ import styles from "./styles/Home.module.scss";
 import SkipBar from "./components/SkipBar";
 import AboutContainer from "./components/AboutContainer";
 import PresentationContainer from "./components/PresentationContainer";
-import MainPhrase from "./components/MainPhrase";
+import CircleContainer from "./components/CircleContainer";
 
 export default function Home() {
   return (
     <main className={styles.home}>
       <div className={styles.home__wrapper}>
         <div className={styles.home__container}>
-          <MainPhrase />
+          <CircleContainer />
           <SkipBar />
         </div>
         <div className={styles.home__container}>

@@ -5,7 +5,8 @@ import HandWavingIcon from "./HandWavingIcon";
 
 export default function TooltipBubble(): JSX.Element {
   return (
-    <div className={styles.tooltip}>
+    //make dynamic css styling
+    <div style={{ width: 100 }} className={styles.tooltip}>
       <HandWavingIcon />
     </div>
   );

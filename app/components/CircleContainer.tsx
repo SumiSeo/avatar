@@ -8,8 +8,10 @@ export default function CircleContainer(): JSX.Element {
   return (
     <div className={styles.phrase}>
       <div className={styles.phrase__container}>
-        <MousePointerIcon />
-        <TooltipBubble />
+        <div className={styles.chat__conatainer}>
+          <MousePointerIcon />
+          <TooltipBubble />
+        </div>
       </div>
       <div className={styles.phrase__container}>
         <div className={styles.circle}></div>

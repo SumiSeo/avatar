@@ -10,9 +10,9 @@ export default function MousePointerIcon(): JSX.Element {
         viewBox="0 0 24 24"
         stroke="#ffffff"
         fill="#000000"
-        stroke-width="1.3"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       >
         <path d="M4 4l7.07 17 2.51-7.39L21 11.07z" />
       </svg>

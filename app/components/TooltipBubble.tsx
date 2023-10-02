@@ -5,18 +5,21 @@ import HandWavingIcon from "./HandWavingIcon";
 
 export default function TooltipBubble(): JSX.Element {
   const bubbleChat = [
-    "waving",
-    "My name is Sumi",
-    "I am a software engineer",
     "and",
-    "content creator",
+    "a content creator",
     "Let me show you more about my work",
     "my world",
   ];
+
   return (
-    //make dynamic css styling
-    <div className={styles.tooltip}>
-      <HandWavingIcon />
-    </div>
+    <>
+      <div className={styles.tooltip}>
+        <div className={styles.bubble}>
+          <HandWavingIcon />
+        </div>
+        <div className={styles.bubble}>My name is Sumi.</div>
+        <div className={styles.bubble}>I am a software engineer</div>
+      </div>
+    </>
   );
 }

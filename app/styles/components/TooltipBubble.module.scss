@@ -27,4 +27,11 @@
   &:nth-child(3) {
     width: 25rem;
   }
+  span {
+    background-color: $default-blue;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

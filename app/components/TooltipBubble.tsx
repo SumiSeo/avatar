@@ -18,7 +18,9 @@ export default function TooltipBubble(): JSX.Element {
           <HandWavingIcon />
         </div>
         <div className={styles.bubble}>My name is Sumi.</div>
-        <div className={styles.bubble}>I am a software engineer</div>
+        <div className={styles.bubble}>
+          I am a &nbsp;<span>software engineer</span>
+        </div>
       </div>
     </>
   );

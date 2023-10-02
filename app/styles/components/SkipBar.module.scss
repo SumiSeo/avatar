@@ -1,0 +1,21 @@
+.skipBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 300;
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  padding: 2rem 3rem;
+  bottom: 0;
+  overflow: hidden;
+  &__box {
+  }
+  &__link {
+    color: white;
+    border-bottom: 0.1rem white solid;
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+  }
+}

@@ -1,4 +1,15 @@
-const Education = (): JSX.Element => {
-  return <div>education </div>;
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Education",
+  description:
+    "Sumi SEO | Software Engineer | Machine learning | Biomedical Engineering",
 };
-export default Education;
+
+export default function Education(): JSX.Element {
+  return (
+    <main>
+      <div>TEST</div>
+    </main>
+  );
+}

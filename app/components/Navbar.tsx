@@ -1,14 +1,22 @@
 import Link from "next/link";
-import Image from "next/image";
+import styles from "../styles/components/Navbar.module.scss";
 
-const NavBar = (): JSX.Element => {
+export default function NavBar(): JSX.Element {
   return (
-    <nav>
-      {/*  <Image src={} alt = {}/> */}
-      <Link href="/">Home</Link>
-      <Link href="/education">Education</Link>
+    <nav className={styles.nav}>
+      <div className={styles.nav__box}>
+        <Link className={styles.nav__link} href="/">
+          S u m i
+        </Link>
+      </div>
+      <div className={styles.nav__box}>
+        <Link className={styles.nav__link} href="/contact">
+          Contact
+        </Link>
+        <Link className={styles.nav__link} href="/education">
+          Sign In
+        </Link>
+      </div>
     </nav>
   );
-};
-
-export default NavBar;
+}

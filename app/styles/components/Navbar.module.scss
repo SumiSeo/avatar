@@ -1,0 +1,24 @@
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 300;
+  &__box {
+    background-color: black;
+    color: white;
+    padding: 2rem 1rem;
+  }
+  &__link {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+}

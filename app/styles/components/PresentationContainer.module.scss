@@ -1,0 +1,37 @@
+.presentation {
+  display: flex;
+  flex-direction: column;
+  height: 70rem;
+  width: 120rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  &__container {
+    border-radius: 2rem;
+    &:first-child {
+      position: absolute;
+      z-index: 100;
+      top: 1rem;
+      border-radius: 2rem;
+    }
+    &:nth-child(2) {
+      background-color: orange;
+      height: 100%;
+      box-sizing: border-box;
+      border-radius: 2rem;
+    }
+    &:last-child {
+      position: absolute;
+      bottom: 3rem;
+      width: 70rem;
+      margin-left: 4rem;
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: black;
+      z-index: 100;
+      line-height: 3rem;
+    }
+  }
+  &__bar {
+  }
+}

@@ -1,0 +1,94 @@
+@import "../variables";
+
+.title {
+  color: $default-white;
+  span {
+    font-size: 2.1rem;
+    font-weight: 500;
+    &:hover {
+      color: transparent;
+    }
+  }
+}
+.phrase {
+  &__container {
+  }
+}
+
+.circle {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  opacity: 0;
+  &:first-child {
+    border: 0.2rem $default-white solid;
+    animation: popin 0.7s forwards ease-in-out;
+    transform: translate(-50%, -50%);
+  }
+  &:nth-child(2) {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 8rem;
+    border: 0.4rem $default-grey solid;
+    z-index: -1;
+    animation: popin 0.7s forwards ease-in-out;
+    animation-delay: 0.4s;
+    transform: translate(-50%, -50%);
+  }
+  &:nth-child(3) {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    border: 0.2rem $default-grey solid;
+    animation: slideUp 0.9s forwards ease-in-out;
+    transform: translate(-50%, -50%);
+    animation-delay: 1s;
+    top: 90%;
+  }
+  &:nth-child(4) {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    border: 0.2rem $default-grey solid;
+    animation: slideDown 0.9s forwards ease-in-out;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes popin {
+  60% {
+    transform: scale(0.7);
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes slideUp {
+  60% {
+    transform: translate(-50%, -120%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  60% {
+    transform: translate(-50%, -10%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}

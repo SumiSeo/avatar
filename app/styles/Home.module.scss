@@ -1,0 +1,27 @@
+.home {
+  height: 100vh;
+  font-size: 2rem;
+  box-sizing: border-box;
+  color: white;
+  &__wrapper {
+  }
+  &__container {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 0 4rem;
+    color: red;
+    &:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &:nth-child(2) {
+      background-color: white;
+    }
+    &:last-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

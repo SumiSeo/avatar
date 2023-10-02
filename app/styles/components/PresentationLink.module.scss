@@ -1,0 +1,25 @@
+.link {
+  max-width: 20rem;
+  display: flex;
+  background-color: white;
+  height: 2.6rem;
+  border-radius: 12px;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.circle {
+  width: 1rem;
+  height: 1rem;
+  background-color: black;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+.hidden {
+  display: none;
+}
+
+.name {
+  font-size: 1.2rem;
+  color: black;
+}

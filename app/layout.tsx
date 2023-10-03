@@ -3,7 +3,7 @@ import { Nunito_Sans } from "next/font/google";
 import "./styles/globals.scss";
 
 // components
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 

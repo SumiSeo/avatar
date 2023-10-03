@@ -1,0 +1,22 @@
+@import "./variables";
+
+.notFound {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  background-color: $default-white;
+  color: $default-black;
+
+  h1 {
+    font-size: 8rem;
+    margin-bottom: 8rem;
+    font-weight: 300;
+  }
+  h3 {
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+}

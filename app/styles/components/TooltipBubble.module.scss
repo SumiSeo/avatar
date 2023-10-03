@@ -21,17 +21,18 @@
   margin-bottom: 0.6rem;
   &:first-child {
     width: 6rem;
-    animation: bubbleUp 1.3s forwards ease-in-out;
+    animation: bubbleUp 1.5s forwards ease-in-out;
+    animation-delay: 2s;
   }
   &:nth-child(2) {
     width: 20rem;
-    animation: bubbleUpSecond 1.8s forwards ease-in-out;
-    animation-delay: 1.2s;
+    animation: bubbleUpSecond 2s forwards ease-in-out;
+    animation-delay: 2.5s;
   }
   &:nth-child(3) {
     width: 25rem;
-    animation: bubbleUpThird 1.9s forwards ease-in-out;
-    animation-delay: 2s;
+    animation: bubbleUpThird 2s forwards ease-in-out;
+    animation-delay: 3.5s;
   }
   span {
     background-color: $default-blue;

@@ -3,10 +3,9 @@
 .tooltip {
   position: absolute;
   z-index: 10000;
-  top: 42%;
   left: 50%;
-  background-color: $default-black;
   color: $default-white;
+  top: 43%;
 }
 
 .bubble {
@@ -15,17 +14,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $default-black;
   border-radius: 1.7rem;
   border: 0.04rem $ligth-grey solid;
+  opacity: 0;
+  margin-bottom: 0.6rem;
   &:first-child {
     width: 6rem;
+    animation: bubbleUp 1.3s forwards ease-in-out;
   }
   &:nth-child(2) {
     width: 20rem;
-    top: 38%;
+    animation: bubbleUpSecond 1.8s forwards ease-in-out;
+    animation-delay: 1.2s;
   }
   &:nth-child(3) {
     width: 25rem;
+    animation: bubbleUpThird 1.9s forwards ease-in-out;
+    animation-delay: 2s;
   }
   span {
     background-color: $default-blue;
@@ -33,5 +39,38 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@keyframes bubbleUp {
+  60% {
+    transform: translateY(-120%);
+    opacity: 1;
+  }
+  100% {
+    transofrm: transalteY(-190%);
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleUpSecond {
+  60% {
+    transform: translateY(-120%);
+    opacity: 1;
+  }
+  100% {
+    transofrm: transalteY(-240%);
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleUpThird {
+  60% {
+    transform: translateY(-120%);
+    opacity: 1;
+  }
+  100% {
+    transofrm: transalteY(-240%);
+    opacity: 0;
   }
 }

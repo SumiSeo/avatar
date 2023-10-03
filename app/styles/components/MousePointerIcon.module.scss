@@ -1,3 +1,5 @@
+@import "../variables";
+
 .pointer {
   position: absolute;
   top: 49%;
@@ -6,6 +8,21 @@
   z-index: 100;
   animation: mouseUp 2s forwards ease-in-out;
   animation-delay: 4s;
+  &__circle {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    transform: translate(-50%, -50%);
+    animation-delay: 1s;
+    background-color: $default-blue;
+    z-index: -1;
+    top: 10%;
+    border: 0.2rem $default-blue solid;
+    opacity: 0;
+    animation: appear 2.8s forwards ease-in-out;
+    animation-delay: 3.5s;
+  }
 }
 
 @keyframes mouseUp {
@@ -18,5 +35,17 @@
   100% {
     transform: translateY(0%);
     transform: translateX(-1000%);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

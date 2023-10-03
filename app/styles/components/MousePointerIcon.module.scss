@@ -9,10 +9,14 @@
 }
 
 @keyframes mouseUp {
-  60% {
+  20% {
     transform: translateY(0%);
   }
-  100% {
+  50% {
     transform: translateY(-920%);
+  }
+  100% {
+    transform: translateY(0%);
+    transform: translateX(-1000%);
   }
 }

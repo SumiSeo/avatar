@@ -10,8 +10,17 @@
     }
   }
 }
-.phrase {
+.chat {
   &__container {
+    position: relative;
+  }
+  &__bubble {
+    &:nth-child(2) {
+      position: absolute;
+    }
+    &:nth-child(3) {
+      position: absolute;
+    }
   }
 }
 

@@ -1,7 +1,78 @@
+@import "../variables";
+
 .pointer {
   position: absolute;
   top: 49%;
   left: 50%;
   margin-right: -50%;
   z-index: 100;
+  animation: mouseUp 2s forwards ease-in-out;
+  animation-delay: 4s;
+  &__circle {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    transform: translate(-50%, -50%);
+    animation-delay: 1s;
+    background-color: $default-blue;
+    z-index: -1;
+    top: 10%;
+    border: 0.2rem $default-blue solid;
+    opacity: 0;
+    animation: appear 2.4s forwards ease-in-out;
+    animation-delay: 3.8s;
+  }
+  &__cursor {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 30%;
+    background-color: $default-blue;
+    z-index: 10;
+    border: 0.2rem $default-grey solid;
+    opacity: 0;
+    animation: cursorAppear 2.4s forwards ease-in-out;
+    animation-delay: 4.8s;
+  }
+}
+
+@keyframes mouseUp {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-920%);
+  }
+  100% {
+    transform: translateY(0%);
+    transform: translateX(-1000%);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cursorAppear {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
 }

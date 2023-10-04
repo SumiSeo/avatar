@@ -1,19 +1,8 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  Dispatch,
-  SetStateAction,
-  useState,
-} from "react";
-
-interface ContextProps {
-  skippedIntro: boolean;
-  setSkippedIntro: Dispatch<SetStateAction<boolean>>;
-  disappearCircles: boolean;
-  setDisappearCircles: Dispatch<SetStateAction<boolean>>;
-}
+import { createContext, useContext, useState } from "react";
+import { ChildrenJSXProps } from "../types/ChildrenJsxPropsx";
+import { ContextProps } from "../types/Context";
 
 const GlobalContext = createContext<ContextProps>({
   skippedIntro: false,
@@ -22,7 +11,7 @@ const GlobalContext = createContext<ContextProps>({
   setDisappearCircles: (): boolean => true,
 });
 
-export const GlobalContextProvider = ({ children }) => {
+export const GlobalContextProvider = ({ children }: ChildrenJSXProps) => {
   const [skippedIntro, setSkippedIntro] = useState<boolean>(false);
   const [disappearCircles, setDisappearCircles] = useState<boolean>(false);
   return (

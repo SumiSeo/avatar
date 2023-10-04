@@ -19,6 +19,7 @@ export default function MousePointerIcon(): JSX.Element {
         </svg>
       </div>
       <div className={styles.pointer__circle}></div>
+      <div className={styles.pointer__cursor}></div>
     </>
   );
 }

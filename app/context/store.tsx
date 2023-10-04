@@ -11,17 +11,29 @@ import {
 interface ContextProps {
   skippedIntro: boolean;
   setSkippedIntro: Dispatch<SetStateAction<boolean>>;
+  disappearCircles: boolean;
+  setDisappearCircles: Dispatch<SetStateAction<boolean>>;
 }
 
 const GlobalContext = createContext<ContextProps>({
   skippedIntro: false,
   setSkippedIntro: (): boolean => true,
+  disappearCircles: false,
+  setDisappearCircles: (): boolean => true,
 });
 
 export const GlobalContextProvider = ({ children }) => {
   const [skippedIntro, setSkippedIntro] = useState<boolean>(false);
+  const [disappearCircles, setDisappearCircles] = useState<boolean>(false);
   return (
-    <GlobalContext.Provider value={{ skippedIntro, setSkippedIntro }}>
+    <GlobalContext.Provider
+      value={{
+        skippedIntro,
+        setSkippedIntro,
+        disappearCircles,
+        setDisappearCircles,
+      }}
+    >
       {children}
     </GlobalContext.Provider>
   );

@@ -1,43 +1,16 @@
 .contact {
   background-color: white;
-  box-sizing: border-box;
+  color: black;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 0rem 15rem;
   justify-content: center;
-  height: 40rem;
-  font-size: 1.4rem;
+  align-items: center;
+
   &__container {
     &:first-child {
-      display: flex;
-      align-items: center;
-      margin-bottom: 4rem;
+      font-size: 7rem;
+      font-weight: 500;
     }
-  }
-  &__box {
-    &:nth-child(2) {
-      padding: 0 10rem;
-      font-size: 6rem;
-      text-decoration: underline;
-      font-weight: 300;
-    }
-  }
-  &__title {
-    margin-right: 10rem;
-    font-size: 7rem;
-    font-weight: 400;
-  }
-  &__label {
-  }
-  &__input {
-  }
-  &__select {
-    font-size: 6rem;
-    text-decoration: underline;
-    font-weight: 300;
-    outline: none;
-  }
-  &__option {
-    outline: none;
   }
 }

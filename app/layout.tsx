@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./styles/globals.scss";
+import { GlobalContextProvider } from "./context/store";
 
 // components
 import NavBar from "./components/Navbar";
@@ -22,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={nunitoSans.className}>
         <NavBar />
-        {children}
+        <GlobalContextProvider>{children}</GlobalContextProvider>
       </body>
     </html>
   );

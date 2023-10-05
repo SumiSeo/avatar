@@ -1,21 +1,8 @@
 "use client";
 
-import { useEffect } from "react";
-import { useState } from "react";
 import styles from "../styles/components/MousePointerIcon.module.scss";
 
 export default function MousePointerIcon(): JSX.Element {
-  const [showFocus, setShowFoucs] = useState<boolean>(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowFoucs(true), console.log("after five seconds");
-    }, 5000);
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [showFocus]);
-
   return (
     <>
       <div className={styles.pointer}>

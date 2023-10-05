@@ -35,10 +35,12 @@ export default function CircleContainer(): JSX.Element {
           <div className={styles.circle}></div>
         </div>
       </div>
-      <div className={styles.phrase__container}>
+      <div
+        className={disappearCircles ? styles.phrase__container : styles.hidden}
+      >
         <div className={styles.phrase__cursor}></div>
-        <div className={styles.phrase__text}>
-          Breakthrough Creator for Ergonomic Software Engineering
+        <div className={disappearCircles ? styles.phrase__text : styles.hidden}>
+          Breakthrough Developer for Ergonomic Software Engineering
         </div>
       </div>
     </>

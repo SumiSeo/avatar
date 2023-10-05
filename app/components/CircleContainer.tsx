@@ -21,24 +21,21 @@ export default function CircleContainer(): JSX.Element {
 
   return (
     <>
-      {disappearCircles ? (
-        <div></div>
-      ) : (
-        <div className={styles.phrase}>
-          <div className={styles.phrase__container}>
-            <div className={styles.chat__conatainer}>
-              <MousePointerIcon />
-              <TooltipBubble />
-            </div>
-          </div>
-          <div className={styles.phrase__container}>
-            <div className={styles.circle}></div>
-            <div className={styles.circle}></div>
-            <div className={styles.circle}></div>
-            <div className={styles.circle}></div>
+      <div className={!disappearCircles ? styles.phrase : styles.hidden}>
+        <div className={styles.phrase__container}>
+          <div className={styles.chat__conatainer}>
+            <MousePointerIcon />
+            <TooltipBubble />
           </div>
         </div>
-      )}
+        <div className={styles.phrase__container}>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
+          <div className={styles.circle}></div>
+        </div>
+      </div>
+      <div className={styles.phrase__text}></div>
     </>
   );
 }

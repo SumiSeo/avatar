@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface ChildrenJSXProps {
-  children: JSX.Element;
+  children: ReactNode;
 }

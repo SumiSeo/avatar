@@ -4,7 +4,7 @@ import "./styles/globals.scss";
 import { GlobalContextProvider } from "./context/store";
 
 // components
-import NavBar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 

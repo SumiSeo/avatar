@@ -119,7 +119,7 @@
     margin-right: -50%;
     background-color: $default-white;
     z-index: 100;
-    animation: blinkCursor 2s forwards ease-in-out;
+    animation: blinkCursor 1.3s forwards ease-in-out;
     animation-delay: 0.8s;
   }
   &__text {
@@ -138,28 +138,22 @@
 }
 
 @keyframes blinkCursor {
-  10% {
+  15% {
     opacity: 0;
-  }
-  20% {
-    opacity: 1;
   }
   30% {
-    opacity: 0;
-  }
-  40% {
     opacity: 1;
   }
-  50% {
+  45% {
     opacity: 0;
   }
   60% {
     opacity: 1;
   }
-  70% {
+  76% {
     opacity: 0;
   }
-  80% {
+  90% {
     opacity: 1;
   }
   100% {

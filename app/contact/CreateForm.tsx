@@ -10,21 +10,31 @@ export default function CreateForm(): JSX.Element {
   const [email, setEmail] = useState<String>("");
   const [message, setMessage] = useState<String>("");
   const [company, setCompany] = useState<String>("");
-  const [jobTitle, setJobTitle] = useState<String>("");
-  const [phone, setPhone] = useState<String>("");
-  const [region, setRegion] = useState<String>("Please select an option");
+  const [jobTitle, setJobTitle] = useState<String>("None  ");
+  const [phone, setPhone] = useState<String>("None");
+  const [region, setRegion] = useState<String>("Location");
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: any) => {
     //post request
     e.preventDefault();
     setIsLoading(true);
-
-    const response = await fetch("http://localhost:4000/presentations", {
+    const msg = {
+      name,
+      location,
+      company,
+      email,
+      phone,
+      message,
+      id: 1,
+      jobTitle,
+    };
+    const response = await fetch("http://localhost:4000/messages", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
+      body: JSON.stringify(msg),
     });
     if (response.status === 201) {
       router.refresh();

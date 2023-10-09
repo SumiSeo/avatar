@@ -16,12 +16,11 @@ export default function CreateForm(): JSX.Element {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: any) => {
-    //post request
     e.preventDefault();
     setIsLoading(true);
     const msg = {
       name,
-      location,
+      region,
       company,
       email,
       phone,
@@ -38,7 +37,6 @@ export default function CreateForm(): JSX.Element {
     });
     if (response.status === 201) {
       router.refresh();
-      router.push("/");
     }
   };
 

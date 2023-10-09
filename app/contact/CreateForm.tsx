@@ -49,6 +49,7 @@ export default function CreateForm(): JSX.Element {
               placeholder="I am based in"
               onChange={(e) => setRegion(e.target.value)}
             >
+              <option value="APAC">I am based in...</option>
               <option value="APAC">APAC</option>
               <option value="US">US</option>
               <option value="Europe">Europe</option>

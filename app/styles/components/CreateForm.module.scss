@@ -19,6 +19,7 @@
         text-align: end;
         font-size: 1.7rem;
         cursor: pointer;
+        font-family: inherit;
       }
     }
   }
@@ -36,23 +37,44 @@
       color: $default-white;
       background-color: $default-black;
       margin-right: 1rem;
+      font-family: inherit;
+    }
+    input,
+    select,
+    textarea {
+      &::placeholder {
+        font-size: 1.4rem;
+        color: $default-white;
+        font-weight: 200;
+        font-style: italic;
+      }
     }
     select,
     option {
       width: 34rem;
       height: 6rem;
+      font-size: 1.4rem;
+      color: $default-white;
+      font-weight: 200;
+    }
+    select {
+      font-style: italic;
+    }
+    option {
+      padding-right: 2rem;
     }
 
     textarea {
       width: 66rem;
       padding: 1rem 2rem;
-      height: 4rem;
+      height: 10rem;
       outline: none;
       border: none;
       font-size: 1.7rem;
       color: $default-white;
       background-color: $default-black;
       margin-right: 1rem;
+      font-family: inherit;
     }
   }
 }

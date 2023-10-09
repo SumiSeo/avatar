@@ -13,10 +13,13 @@ export default function CreateContact() {
   return (
     <main className={styles.contact}>
       <div className={styles.contact__container}>
-        <h1>Let's work together</h1>
+        <h1>Do you want to discuss more about your company or project ?</h1>
       </div>
       <div className={styles.contact__container}>
-        <CreateForm />
+        <div className={styles.contact__box}>&rarr;</div>
+        <div className={styles.contact__box}>
+          <CreateForm />
+        </div>
       </div>
     </main>
   );

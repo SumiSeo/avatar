@@ -10,7 +10,8 @@
   height: 95vh;
   box-sizing: border-box;
   overflow: hidden;
-  padding-left: 24rem;
+  align-items: center;
+
   &__container {
     &:first-child {
       margin-top: 20rem;

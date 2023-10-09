@@ -18,7 +18,10 @@ export default function CreateContact() {
         </h1>
       </div>
       <div className={styles.contact__container}>
-        <CreateForm />
+        <div className={styles.contact__box}>&rarr;</div>
+        <div className={styles.contact__box}>
+          <CreateForm />
+        </div>
       </div>
     </main>
   );

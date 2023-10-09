@@ -1,2 +1,58 @@
+@import "../variables";
 .form {
+  width: 70rem;
+  &__container {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    &:last-child {
+      margin-top: 5rem;
+      display: flex;
+      justify-content: flex-end;
+      button {
+        width: 20rem;
+        height: 4rem;
+        color: $default-black;
+        outline: none;
+        background: none;
+        border: none;
+        text-align: end;
+        font-size: 1.7rem;
+        cursor: pointer;
+      }
+    }
+  }
+  &__box {
+    margin-right: 1rem;
+    input,
+    select,
+    option {
+      width: 30rem;
+      padding: 1rem 2rem;
+      height: 4rem;
+      outline: none;
+      border: none;
+      font-size: 1.7rem;
+      color: $default-white;
+      background-color: $default-black;
+      margin-right: 1rem;
+    }
+    select,
+    option {
+      width: 34rem;
+      height: 6rem;
+    }
+
+    textarea {
+      width: 66rem;
+      padding: 1rem 2rem;
+      height: 4rem;
+      outline: none;
+      border: none;
+      font-size: 1.7rem;
+      color: $default-white;
+      background-color: $default-black;
+      margin-right: 1rem;
+    }
+  }
 }

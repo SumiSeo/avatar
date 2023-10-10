@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito_Sans } from "next/font/google";
 import "./styles/globals.scss";
-
+import { ApolloWrapper } from "./utilities/apollo-wrapper";
 import { GlobalContextProvider } from "./context/store";
 
 // components
@@ -18,14 +18,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  makeSuspenseCache,
 }: {
   children: React.ReactNode;
+  makeSuspenseCache: any;
 }) {
   return (
     <html lang="en">
       <body className={nunitoSans.className}>
         <NavBar />
-        <GlobalContextProvider>{children}</GlobalContextProvider>
+        <ApolloWrapper>
+          <GlobalContextProvider>{children}</GlobalContextProvider>
+        </ApolloWrapper>
       </body>
     </html>
   );

@@ -1,12 +1,19 @@
-import styles from "../styles/components/AboutContainer.module.scss";
-import Image from "next/image";
-import Light from "../../public/light.gif";
+"use Client";
 
+import styles from "../styles/components/AboutContainer.module.scss";
+import { TEST } from "../utilities/queries/ContactMessage";
+import { useQuery } from "@apollo/client";
 //components
 import ContentBar from "./ContentBar";
 import Content from "./Content";
 
 export default function AboutContainer(): JSX.Element {
+  const { data, loading } = useQuery(TEST);
+  if (loading) {
+    return <div>Loading...</div>;
+  } else {
+    console.log("data", data);
+  }
   return (
     <div className={styles.about}>
       <div className={styles.about__container}>

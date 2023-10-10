@@ -27,6 +27,17 @@ export default function AboutContainer(): JSX.Element {
       })
     );
   };
+  const createContent = () => {
+    return (
+      data.my_mission && (
+        <Content
+          mission_description={data.my_mission[0].mission_description}
+          mission_title={data.my_mission[0].mission_title}
+          mission_id={data.my_mission[0].mission_id}
+        />
+      )
+    );
+  };
 
   return (
     <div className={styles.about}>
@@ -43,9 +54,7 @@ export default function AboutContainer(): JSX.Element {
       </div>
       <div className={styles.about__container}>
         <div className={styles.about__box}>{createContentBar()}</div>
-        <div className={styles.about__box}>
-          <Content />
-        </div>
+        <div className={styles.about__box}>{createContent()}</div>
       </div>
     </div>
   );

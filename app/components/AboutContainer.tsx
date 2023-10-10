@@ -3,17 +3,21 @@
 import styles from "../styles/components/AboutContainer.module.scss";
 import { MY_MISSIONS } from "../utilities/queries/MyMission";
 import { useQuery } from "@apollo/client";
+import { useGlobalContext } from "../context/store";
+
 //components
 import ContentBar from "./ContentBar";
 import Content from "./Content";
 import { MyMissionProps } from "../types/MyMission";
 
 export default function AboutContainer(): JSX.Element {
+  const { missionNumber, setMissionNumber } = useGlobalContext();
   const { data, loading } = useQuery(MY_MISSIONS);
   if (loading) {
     return <div>Loading...</div>;
   } else {
     console.log("data", data);
+    console.log("missionnumber", missionNumber);
   }
   const createContentBar = (): JSX.Element => {
     return (

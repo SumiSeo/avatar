@@ -7,4 +7,6 @@ export interface ContextProps {
   setSkippedIntro: Dispatch<SetStateAction<boolean>>;
   disappearCircles: boolean;
   setDisappearCircles: Dispatch<SetStateAction<boolean>>;
+  missionNumber: number;
+  setMissionNumber: Dispatch<SetStateAction<number>>;
 }

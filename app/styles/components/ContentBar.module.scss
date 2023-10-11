@@ -1,7 +1,7 @@
 .contentBar {
   span {
     display: block;
-    width: 0.15rem;
+    width: 15rem;
     height: 5rem;
     border-radius: 0.4rem;
     background-color: black;
@@ -9,7 +9,7 @@
     opacity: 0.3;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    margin-left: 20rem;
+    margin-left: 30rem;
     &:hover {
       opacity: 1;
     }

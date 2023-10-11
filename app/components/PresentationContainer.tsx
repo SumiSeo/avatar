@@ -16,7 +16,7 @@ export default function PresentationContainer(): JSX.Element {
         <PresentationImg />
       </div>
       <div className={styles.presentation__container}>
-        <PresentationLists />
+        {/* <PresentationLists /> */}
       </div>
     </div>
   );

@@ -19,11 +19,14 @@ export default function AboutContainer(): JSX.Element {
     console.log("data", data);
     console.log("missionnumber", missionNumber);
   }
+
   const createContentBar = (): JSX.Element => {
     return (
       data &&
       data.my_mission.map(({ mission_title, mission_id }: MyMissionProps) => {
-        return <ContentBar key={mission_id} title={mission_title} />;
+        return (
+          <ContentBar key={mission_id} title={mission_title} id={mission_id} />
+        );
       })
     );
   };
@@ -31,9 +34,9 @@ export default function AboutContainer(): JSX.Element {
     return (
       data.my_mission && (
         <Content
-          mission_description={data.my_mission[0].mission_description}
-          mission_title={data.my_mission[0].mission_title}
-          mission_id={data.my_mission[0].mission_id}
+          mission_description={data.my_mission[4].mission_description}
+          mission_title={data.my_mission[4].mission_title}
+          mission_id={data.my_mission[4].mission_id}
         />
       )
     );

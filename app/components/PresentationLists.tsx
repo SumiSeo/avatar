@@ -1,19 +1,20 @@
-async function getPresentations() {
-  const res = await fetch("http://localhost:4000/projects", {
-    next: {
-      revalidate: 0,
-    },
-  });
-  return await res.json();
-}
+"use client";
 
-export default async function PresentationLists() {
-  const presentations = await getPresentations();
-  return (
-    <>
-      {presentations.map((project: any) => (
-        <div key={project.id}>{project.title}</div>
-      ))}
-    </>
-  );
+import { useQuery } from "@apollo/client";
+import { MY_PROJECTS } from "../utilities/queries/MyProject";
+
+export default function PresentationLists(): JSX.Element {
+  const { data, loading } = useQuery(MY_PROJECTS);
+  if (loading) {
+    return <div>Loading...</div>;
+  } else {
+    console.log("projectsss", data.my_projects);
+  }
+
+  const createProjectLists = (): JSX.Element => {
+    return data.my_projects.map((project: any) => {
+      return <div key={project.project_id}>{project.project_name}</div>;
+    });
+  };
+  return <>{createProjectLists()}</>;
 }

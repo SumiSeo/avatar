@@ -15,17 +15,25 @@ export default function AboutContainer(): JSX.Element {
   const { data, loading } = useQuery(MY_MISSIONS);
   if (loading) {
     return <div>Loading...</div>;
-  } else {
-    console.log("data", data);
-    console.log("missionnumber", missionNumber);
   }
+
+  const onClickContent = (e: any, mission_id: number) => {
+    e.preventDefault();
+    setMissionNumber(mission_id);
+  };
 
   const createContentBar = (): JSX.Element => {
     return (
       data &&
       data.my_mission.map(({ mission_title, mission_id }: MyMissionProps) => {
         return (
-          <ContentBar key={mission_id} title={mission_title} id={mission_id} />
+          <div onClick={(e: any) => onClickContent(e, mission_id)}>
+            <ContentBar
+              key={mission_id}
+              title={mission_title}
+              id={mission_id}
+            />
+          </div>
         );
       })
     );
@@ -34,9 +42,11 @@ export default function AboutContainer(): JSX.Element {
     return (
       data.my_mission && (
         <Content
-          mission_description={data.my_mission[4].mission_description}
-          mission_title={data.my_mission[4].mission_title}
-          mission_id={data.my_mission[4].mission_id}
+          mission_description={
+            data.my_mission[missionNumber].mission_description
+          }
+          mission_title={data.my_mission[missionNumber].mission_title}
+          mission_id={data.my_mission[missionNumber].mission_id}
         />
       )
     );

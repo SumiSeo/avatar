@@ -2,7 +2,6 @@ import styles from "../styles/components/PresentationContainer.module.scss";
 
 //comp
 import PresentationBar from "./PresentationBar";
-import PresentationFooter from "./PresentationFooter";
 import PresentationImg from "./PresentationImg";
 import PresentationLists from "./PresentationLists";
 

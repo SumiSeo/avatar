@@ -12,30 +12,36 @@ export default function CreateForm(): JSX.Element {
   const [email, setEmail] = useState<String>("");
   const [message, setMessage] = useState<String>("");
   const [company, setCompany] = useState<String>("");
-  const [jobTitle, setJobTitle] = useState<String>("None  ");
-  const [phone, setPhone] = useState<String>("None");
-  const [region, setRegion] = useState<String>("Location");
+  const [jobTitle, setJobTitle] = useState<String>("");
+  const [phone, setPhone] = useState<String>("");
+  const [region, setRegion] = useState<String>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const router = useRouter();
+  const userUuid = uuidv4();
+
+  const [insertContactMessage, { data, loading, error }] = useMutation(
+    INSERT_CONTACT_MESSAGE
+  );
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    const userUuid = uuidv4();
-    setIsLoading(true);
-    const { data, loading } = useMutation(INSERT_CONTACT_MESSAGE, {
+    insertContactMessage({
       variables: {
-        name,
-        email,
-        message,
-        company,
-        jobTitle,
-        region,
-        phone,
+        contact_name: name,
+        contact_email: email,
+        contact_message: message,
+        contact_company: company,
+        contact_jobTitle: jobTitle,
+        contact_region: region,
+        contact_phone: phone,
         id: userUuid,
       },
     });
-    console.log("data", data);
-    console.log("loading", loading);
+
+    if (error === undefined) {
+      setIsLoading(true);
+      router.push("/");
+    }
   };
 
   return (

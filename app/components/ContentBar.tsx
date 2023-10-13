@@ -11,7 +11,7 @@ export default function ContentBar({
 }): JSX.Element {
   return (
     <div className={styles.contentBar}>
-      <span data-key={title} className={styles.contentBar__box}>
+      <span data-key={title} key={id} className={styles.contentBar__box}>
         <div className={styles.about__box}></div>
       </span>
     </div>

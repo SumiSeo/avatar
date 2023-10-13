@@ -1,10 +1,14 @@
 "use client";
 
+import styles from "../styles/components/CreateForm.module.scss";
+import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import styles from "../styles/components/CreateForm.module.scss";
+import { INSERT_CONTACT_MESSAGE } from "../utilities/mutations/InsertContactMessage";
+import { useMutation } from "@apollo/client";
 
 export default function CreateForm(): JSX.Element {
+  console.log("uuid", myuuid);
   const router = useRouter();
   const [name, setName] = useState<String>("");
   const [email, setEmail] = useState<String>("");
@@ -17,6 +21,7 @@ export default function CreateForm(): JSX.Element {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    const userUuid = uuidv4();
     setIsLoading(true);
     const msg = {
       name,
@@ -28,16 +33,7 @@ export default function CreateForm(): JSX.Element {
       id: 1,
       jobTitle,
     };
-    const response = await fetch("http://localhost:4000/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(msg),
-    });
-    if (response.status === 201) {
-      router.refresh();
-    }
+    const { data, loading } = useMutation(INSERT_CONTACT_MESSAGE);
   };
 
   return (

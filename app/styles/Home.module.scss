@@ -3,8 +3,7 @@
   font-size: 2rem;
   box-sizing: border-box;
   color: white;
-  &__wrapper {
-  }
+
   &__container {
     box-sizing: border-box;
     height: 100vh;
@@ -12,13 +11,17 @@
     color: red;
     &:first-child {
       display: flex;
+      box-sizing: border-box;
       justify-content: center;
       align-items: center;
     }
     &:nth-child(2) {
       background-color: white;
+      display: flex;
+      justify-content: center;
     }
     &:last-child {
+      box-sizing: border-box;
       display: flex;
       justify-content: center;
       align-items: center;

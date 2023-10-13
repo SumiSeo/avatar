@@ -9,11 +9,14 @@ const GlobalContext = createContext<ContextProps>({
   setSkippedIntro: (): boolean => true,
   disappearCircles: false,
   setDisappearCircles: (): boolean => true,
+  missionNumber: 1,
+  setMissionNumber: (): number => 0,
 });
 
 export const GlobalContextProvider = ({ children }: ChildrenJSXProps) => {
   const [skippedIntro, setSkippedIntro] = useState<boolean>(false);
   const [disappearCircles, setDisappearCircles] = useState<boolean>(false);
+  const [missionNumber, setMissionNumber] = useState<number>(1);
   return (
     <GlobalContext.Provider
       value={{
@@ -21,6 +24,8 @@ export const GlobalContextProvider = ({ children }: ChildrenJSXProps) => {
         setSkippedIntro,
         disappearCircles,
         setDisappearCircles,
+        missionNumber,
+        setMissionNumber,
       }}
     >
       {children}

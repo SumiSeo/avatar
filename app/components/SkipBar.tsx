@@ -6,7 +6,7 @@ import styles from "../styles/components/SkipBar.module.scss";
 
 export default function Footer(): JSX.Element {
   const { disappearCircles, setDisappearCircles } = useGlobalContext();
-  const handleSkip = (e) => {
+  const handleSkip = (e: any) => {
     e.preventDefault();
     setDisappearCircles(true);
   };

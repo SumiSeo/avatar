@@ -1,9 +1,19 @@
+"use client";
+
 import styles from "../styles/components/ContentBar.module.scss";
 
-export default function ContentBar(): JSX.Element {
+export default function ContentBar({
+  title,
+  id,
+}: {
+  title: String;
+  id: number;
+}): JSX.Element {
   return (
     <div className={styles.contentBar}>
-      <span className={styles.contentBar__box}></span>
+      <span data-key={title} key={id} className={styles.contentBar__box}>
+        <div className={styles.about__box}></div>
+      </span>
     </div>
   );
 }

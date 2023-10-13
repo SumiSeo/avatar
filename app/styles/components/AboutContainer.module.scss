@@ -4,10 +4,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0;
+  padding: 10rem 25rem;
   &__container {
     &:first-child {
-      padding: 0 20rem;
       margin-bottom: 10rem;
       h1 {
         font-weight: 300;
@@ -20,13 +19,8 @@
         line-height: 1.2;
       }
     }
-    &:nth-child(2) {
+    &:last-child {
       display: flex;
-    }
-  }
-  &__box {
-    :nth-child(3) {
-      margin-right: 20rem;
     }
   }
 }

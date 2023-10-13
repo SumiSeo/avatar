@@ -1,42 +1,46 @@
 "use client";
 
+import styles from "../styles/components/CreateForm.module.scss";
+import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import styles from "../styles/components/CreateForm.module.scss";
+import { INSERT_CONTACT_MESSAGE } from "../utilities/mutations/InsertContactMessage";
+import { useMutation } from "@apollo/client";
 
 export default function CreateForm(): JSX.Element {
-  const router = useRouter();
   const [name, setName] = useState<String>("");
   const [email, setEmail] = useState<String>("");
   const [message, setMessage] = useState<String>("");
   const [company, setCompany] = useState<String>("");
-  const [jobTitle, setJobTitle] = useState<String>("None  ");
-  const [phone, setPhone] = useState<String>("None");
-  const [region, setRegion] = useState<String>("Location");
+  const [jobTitle, setJobTitle] = useState<String>("");
+  const [phone, setPhone] = useState<String>("");
+  const [region, setRegion] = useState<String>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const router = useRouter();
+  const userUuid = uuidv4();
 
-  const handleSubmit = async (e: any) => {
+  const [insertContactMessage, { data, loading, error }] = useMutation(
+    INSERT_CONTACT_MESSAGE
+  );
+
+  const handleSubmit = (e: any) => {
     e.preventDefault();
-    setIsLoading(true);
-    const msg = {
-      name,
-      region,
-      company,
-      email,
-      phone,
-      message,
-      id: 1,
-      jobTitle,
-    };
-    const response = await fetch("http://localhost:4000/messages", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+    insertContactMessage({
+      variables: {
+        contact_name: name,
+        contact_email: email,
+        contact_message: message,
+        contact_company: company,
+        contact_jobTitle: jobTitle,
+        contact_region: region,
+        contact_phone: phone,
+        id: userUuid,
       },
-      body: JSON.stringify(msg),
     });
-    if (response.status === 201) {
-      router.refresh();
+
+    if (error === undefined) {
+      setIsLoading(true);
+      router.push("/");
     }
   };
 

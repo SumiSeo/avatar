@@ -1,4 +1,4 @@
-"use Client";
+"use client";
 
 import styles from "../styles/components/AboutContainer.module.scss";
 import { MY_MISSIONS } from "../utilities/queries/MyMission";
@@ -19,7 +19,7 @@ export default function AboutContainer(): JSX.Element {
 
   const onClickContent = (e: any, mission_id: number) => {
     e.preventDefault();
-    setMissionNumber(mission_id);
+    setMissionNumber(mission_id - 1);
   };
 
   const createContentBar = (): JSX.Element => {
@@ -27,12 +27,11 @@ export default function AboutContainer(): JSX.Element {
       data &&
       data.my_mission.map(({ mission_title, mission_id }: MyMissionProps) => {
         return (
-          <div onClick={(e: any) => onClickContent(e, mission_id)}>
-            <ContentBar
-              key={mission_id}
-              title={mission_title}
-              id={mission_id}
-            />
+          <div
+            key={mission_id}
+            onClick={(e: any) => onClickContent(e, mission_id)}
+          >
+            <ContentBar title={mission_title} id={mission_id} />
           </div>
         );
       })

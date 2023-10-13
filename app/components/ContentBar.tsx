@@ -1,4 +1,5 @@
-"use Client";
+"use client";
+
 import styles from "../styles/components/ContentBar.module.scss";
 
 export default function ContentBar({

@@ -10,7 +10,7 @@ import AboutContainer from "./components/AboutContainer";
 import PresentationContainer from "./components/PresentationContainer";
 import CircleContainer from "./components/CircleContainer";
 
-export default async function Home() {
+export default function Home() {
   const { setDisappearCircles } = useGlobalContext();
   useEffect(() => {
     setDisappearCircles(false);

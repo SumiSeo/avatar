@@ -16,7 +16,7 @@ const GlobalContext = createContext<ContextProps>({
 export const GlobalContextProvider = ({ children }: ChildrenJSXProps) => {
   const [skippedIntro, setSkippedIntro] = useState<boolean>(false);
   const [disappearCircles, setDisappearCircles] = useState<boolean>(false);
-  const [missionNumber, setMissionNumber] = useState<number>(1);
+  const [missionNumber, setMissionNumber] = useState<number>(0);
   return (
     <GlobalContext.Provider
       value={{

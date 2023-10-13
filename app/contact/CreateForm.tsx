@@ -8,8 +8,6 @@ import { INSERT_CONTACT_MESSAGE } from "../utilities/mutations/InsertContactMess
 import { useMutation } from "@apollo/client";
 
 export default function CreateForm(): JSX.Element {
-  console.log("uuid", myuuid);
-  const router = useRouter();
   const [name, setName] = useState<String>("");
   const [email, setEmail] = useState<String>("");
   const [message, setMessage] = useState<String>("");
@@ -18,22 +16,26 @@ export default function CreateForm(): JSX.Element {
   const [phone, setPhone] = useState<String>("None");
   const [region, setRegion] = useState<String>("Location");
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const router = useRouter();
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     const userUuid = uuidv4();
     setIsLoading(true);
-    const msg = {
-      name,
-      region,
-      company,
-      email,
-      phone,
-      message,
-      id: 1,
-      jobTitle,
-    };
-    const { data, loading } = useMutation(INSERT_CONTACT_MESSAGE);
+    const { data, loading } = useMutation(INSERT_CONTACT_MESSAGE, {
+      variables: {
+        name,
+        email,
+        message,
+        company,
+        jobTitle,
+        region,
+        phone,
+        id: userUuid,
+      },
+    });
+    console.log("data", data);
+    console.log("loading", loading);
   };
 
   return (

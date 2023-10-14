@@ -7,6 +7,7 @@ import ContentImg from "./ContentImg";
 export default function Content({
   mission_description,
   mission_title,
+  mission_id,
 }: MyMissionProps): JSX.Element {
   return (
     <div className={styles.content}>
@@ -15,7 +16,7 @@ export default function Content({
         <div className={styles.content__desc}>{mission_description}</div>
       </div>
       <div className={styles.content__img}>
-        <ContentImg />
+        <ContentImg id={mission_id} />
       </div>
     </div>
   );

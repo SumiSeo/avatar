@@ -9,4 +9,6 @@ export interface ContextProps {
   setDisappearCircles: Dispatch<SetStateAction<boolean>>;
   missionNumber: number;
   setMissionNumber: Dispatch<SetStateAction<number>>;
+  projectNumber: number;
+  setProjectNumber: Dispatch<SetStateAction<number>>;
 }

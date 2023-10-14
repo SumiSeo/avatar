@@ -20,7 +20,7 @@ export default function ContentImg({ id }: { id: number }): JSX.Element {
   }
   return (
     <div>
-      <Image src={source ? source : src1} alt="human" width={500} height={0} />
+      <Image src={source ? source : src1} alt="human" width={400} height={0} />
     </div>
   );
 }

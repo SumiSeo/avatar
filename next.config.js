@@ -2,8 +2,12 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  // images: {
+  //   unoptimized: true,
+  // },
   images: {
-    unoptimized: true,
+    domains: ["sumiseo.com"],
+    formats: ["image/webp"],
   },
 };
 
@@ -16,8 +20,12 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
+  // images: {
+  //   unoptimized: true,
+  // },
   images: {
-    unoptimized: true,
+    domains: ["sumiseo.com"],
+    formats: ["image/webp"],
   },
 };
 

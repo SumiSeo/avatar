@@ -1,9 +1,9 @@
 import Image from "next/image";
-import src1 from "../../public/light.gif";
-import src2 from "../../public/develop.gif";
-import src3 from "../../public/create.gif";
-import src4 from "../../public/believe.gif";
-import src5 from "../../public/self-study.gif";
+import src1 from "@/public/light.gif";
+import src2 from "@/public/develop.gif";
+import src3 from "@/public/create.gif";
+import src4 from "@/public/believe.gif";
+import src5 from "@/public/self-study.gif";
 
 export default function ContentImg({ id }: { id: number }): JSX.Element {
   let source;

@@ -30,6 +30,7 @@ export default function PresentationContainer(): JSX.Element {
             onClick={(e) => clickProjectTitle(e, project_id)}
           >
             <PresentationBar
+              clicked={projectNumber}
               title={project_name}
               key={project_id}
               id={project_id}

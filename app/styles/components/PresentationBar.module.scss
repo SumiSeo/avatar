@@ -1,3 +1,5 @@
+@import "../variables";
+
 .bar {
   display: flex;
   &__link {
@@ -11,11 +13,12 @@
 .link {
   max-width: 20rem;
   display: flex;
-  background-color: white;
+  background-color: $default-white;
   height: 2.6rem;
   border-radius: 12px;
   align-items: center;
   padding: 0 1rem;
+  opacity: 0.7;
 }
 
 .circle {
@@ -24,6 +27,7 @@
   background-color: black;
   border-radius: 10px;
   margin-right: 0.8rem;
+  transition: all 0.6s ease-in-out;
 }
 
 .name {

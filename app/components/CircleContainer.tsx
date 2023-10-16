@@ -17,7 +17,7 @@ export default function CircleContainer(): JSX.Element {
     return () => {
       clearTimeout(timer);
     };
-  }, [disappearCircles]);
+  }, [disappearCircles, setDisappearCircles]);
 
   return (
     <>

@@ -14,7 +14,7 @@ export default function Home() {
   const { setDisappearCircles } = useGlobalContext();
   useEffect(() => {
     setDisappearCircles(false);
-  }, []);
+  }, [setDisappearCircles]);
 
   return (
     <main className={styles.home}>

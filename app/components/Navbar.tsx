@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/components/Navbar.module.scss";
 
-export default function NavBar(): JSX.Element {
+export default function Navbar(): JSX.Element {
   return (
     <nav className={styles.nav}>
       <div className={styles.nav__box}>

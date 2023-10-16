@@ -5,7 +5,7 @@ import { ApolloWrapper } from "./utilities/apollo-wrapper";
 import { GlobalContextProvider } from "./context/store";
 
 // components
-import NavBar from "./components/NavBar";
+import Navbar from "./components/Navbar";
 
 const nunitoSans = Nunito_Sans({ subsets: ["latin"] });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={nunitoSans.className}>
-        <NavBar />
+        <Navbar />
         <ApolloWrapper>
           <GlobalContextProvider>{children}</GlobalContextProvider>
         </ApolloWrapper>

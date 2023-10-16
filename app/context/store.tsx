@@ -19,7 +19,7 @@ export const GlobalContextProvider = ({ children }: ChildrenJSXProps) => {
   const [skippedIntro, setSkippedIntro] = useState<boolean>(false);
   const [disappearCircles, setDisappearCircles] = useState<boolean>(false);
   const [missionNumber, setMissionNumber] = useState<number>(0);
-  const [projectNumber, setProjectNumber] = useState<number>(0);
+  const [projectNumber, setProjectNumber] = useState<number>(1);
   return (
     <GlobalContext.Provider
       value={{

@@ -1,23 +1,35 @@
 import Image from "next/image";
 import styles from "../styles/components/PresentationImg.module.scss";
-import Contacky from "../../public/contact-favorite.gif";
+import Contacky from "../../public/contact-app.jpg";
 import AiConcierge from "../../public/ai-video.gif";
 
-export default function PresentationImg({ id }: { id: number }): JSX.Element {
-  let source;
-  if (id === 1) {
-    source = AiConcierge;
-  } else if (id === 2) {
-    source = Contacky;
-  }
+//comp
+import PresentationFooter from "./PresentationFooter";
+
+export default function PresentationImg({
+  id,
+  desc,
+}: {
+  id: number;
+  desc: string[];
+}): JSX.Element {
   return (
     <div>
-      <Image
-        fill
-        className={styles.img}
-        src={source ? source : AiConcierge}
-        alt="descritioin"
-      />
+      {id === 1 ? (
+        <Image
+          fill
+          className={styles.img}
+          src={AiConcierge}
+          alt="descritioin"
+        />
+      ) : (
+        ""
+      )}
+      {id === 2 ? (
+        <Image fill className={styles.img} src={Contacky} alt="descritioin" />
+      ) : (
+        ""
+      )}
     </div>
   );
 }

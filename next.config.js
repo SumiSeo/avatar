@@ -3,7 +3,17 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["https://sumiseo.com"],
+    disableStaticImages: true,
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
 };
 
@@ -17,7 +27,17 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   images: {
-    domains: ["https://sumiseo.com"],
+    disableStaticImages: true,
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
 };
 

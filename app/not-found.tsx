@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./styles/NotFound.module.scss";
 
 export default function NotFound(): JSX.Element {

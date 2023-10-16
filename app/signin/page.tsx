@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import styles from "../styles/SignIn.module.scss";
 
-export const metadata: Metadata = {
-  title: "Signin",
-  description: "Sumi SEO | Software Engineer",
-};
-
-export default function Education(): JSX.Element {
+export default function SignIn(): JSX.Element {
   return (
     <main>
       <div className={styles.signin}>

@@ -1,0 +1,22 @@
+@import "./variables";
+
+.blog {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh;
+  background-color: $default-white;
+  color: $default-black;
+
+  h1 {
+    font-size: 8rem;
+    margin-bottom: 8rem;
+    font-weight: 200;
+  }
+  h3 {
+    font-size: 3.9rem;
+    font-weight: 400;
+  }
+}

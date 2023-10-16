@@ -27,11 +27,12 @@ export default function AboutContainer(): JSX.Element {
       data &&
       data.my_mission.map(({ mission_title, mission_id }: MyMissionProps) => {
         return (
-          <div
-            key={mission_id}
-            onClick={(e: any) => onClickContent(e, mission_id)}
-          >
-            <ContentBar title={mission_title} id={mission_id} />
+          <div key={mission_id} onClick={(e) => onClickContent(e, mission_id)}>
+            <ContentBar
+              clicked={missionNumber}
+              title={mission_title}
+              id={mission_id}
+            />
           </div>
         );
       })

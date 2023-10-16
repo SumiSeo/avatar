@@ -58,6 +58,7 @@ export default function CreateForm(): JSX.Element {
           </div>
           <div className={styles.form__box}>
             <select
+              required
               placeholder="I am based in"
               onChange={(e) => setRegion(e.target.value)}
             >

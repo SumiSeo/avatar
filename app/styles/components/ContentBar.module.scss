@@ -1,20 +1,26 @@
+@import "../variables";
+
 .contentBar {
+  cursor: pointer;
   margin-right: 10rem;
   span {
     display: block;
     width: 0.2rem;
     height: 5rem;
     border-radius: 0.4rem;
-    background-color: black;
+    background-color: $default-black;
     margin-bottom: 0.8rem;
-    opacity: 0.3;
-    cursor: pointer;
     transition: all 0.2s ease-in-out;
+  }
+  &__box {
+    opacity: 0.3;
+
     &:hover {
       opacity: 1;
     }
-    &:active {
-      opacity: 1;
-    }
+  }
+
+  &__active {
+    opacity: 1;
   }
 }

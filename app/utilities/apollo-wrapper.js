@@ -1,14 +1,10 @@
 "use client";
 
-import {
-  ApolloClient,
-  ApolloLink,
-  HttpLink,
-  SuspenseCache,
-} from "@apollo/client";
+import { ApolloLink, HttpLink, SuspenseCache } from "@apollo/client";
 import {
   ApolloNextAppProvider,
   NextSSRInMemoryCache,
+  NextSSRApolloClient,
   SSRMultipartLink,
 } from "@apollo/experimental-nextjs-app-support/ssr";
 
@@ -21,7 +17,7 @@ function makeClient() {
     },
   });
 
-  return new ApolloClient({
+  return new NextSSRApolloClient({
     cache: new NextSSRInMemoryCache(),
     link:
       typeof window === "undefined"

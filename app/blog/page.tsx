@@ -1,4 +1,3 @@
-"use client";
 import styles from "../styles/Blog.module.scss";
 
 export default function Blog(): JSX.Element {

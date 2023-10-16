@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "**" }],
+    unoptimized: true,
   },
 };
 
@@ -17,7 +17,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   images: {
-    remotePatterns: [{ protocol: "https", hostname: "**" }],
+    unoptimized: true,
   },
 };
 

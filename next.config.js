@@ -6,8 +6,8 @@ const nextConfig = {
   //   unoptimized: true,
   // },
   images: {
-    domains: ["sumiseo.com"],
-    formats: ["image/webp"],
+    loader: "imgix",
+    path: "htts://sumiseo.com",
   },
 };
 
@@ -24,8 +24,8 @@ module.exports = {
   //   unoptimized: true,
   // },
   images: {
-    domains: ["sumiseo.com"],
-    formats: ["image/webp"],
+    loader: "imgix",
+    path: "htts://sumiseo.com",
   },
 };
 

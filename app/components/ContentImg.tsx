@@ -1,16 +1,17 @@
 import Image from "next/image";
-import src1 from "@/public/light-1.png";
-import src2 from "@/public/develop-1.png";
-import src3 from "@/public/create-1.png";
-import src4 from "@/public/believe-1.png";
-import src5 from "@/public/study-1.png";
+import src1 from "@/public/light.gif";
+import src2 from "@/public/develop.gif";
+import src3 from "@/public/create.gif";
+import src4 from "@/public/believe.gif";
+import src5 from "@/public/self-study.gif";
+
+//comp
+import ContentDevelop from "./ContentDevelop";
 
 export default function ContentImg({ id }: { id: number }): JSX.Element {
   let source;
   if (id === 1) {
     source = src1;
-  } else if (id === 2) {
-    source = src2;
   } else if (id === 3) {
     source = src3;
   } else if (id === 4) {
@@ -20,7 +21,16 @@ export default function ContentImg({ id }: { id: number }): JSX.Element {
   }
   return (
     <div>
-      <Image src={source ? source : src1} alt="human" width={400} height={0} />
+      {id === 2 ? (
+        <ContentDevelop />
+      ) : (
+        <Image
+          src={source ? source : src1}
+          alt="human"
+          width={400}
+          height={0}
+        />
+      )}
     </div>
   );
 }

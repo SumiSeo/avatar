@@ -12,12 +12,6 @@ export default function ContentImg({ id }: { id: number }): JSX.Element {
   let source;
   if (id === 1) {
     source = src1;
-  } else if (id === 3) {
-    source = src3;
-  } else if (id === 4) {
-    source = src4;
-  } else {
-    source = src5;
   }
   return (
     <div>
@@ -31,6 +25,9 @@ export default function ContentImg({ id }: { id: number }): JSX.Element {
           height={0}
         />
       )}
+      {id === 3 ? <Image src={src3} alt="human" width={400} height={0} /> : ""}
+      {id === 4 ? <Image src={src4} alt="human" width={400} height={0} /> : ""}
+      {id === 5 ? <Image src={src5} alt="human" width={400} height={0} /> : ""}
     </div>
   );
 }

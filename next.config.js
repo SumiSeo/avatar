@@ -17,7 +17,7 @@ module.exports = {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   images: {
-    path: "/",
+    domains: ["https://sumiseo.com"],
   },
 };
 

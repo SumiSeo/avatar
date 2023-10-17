@@ -9,6 +9,7 @@ import { useGlobalContext } from "../context/store";
 //comp
 import PresentationBar from "./PresentationBar";
 import PresentationImg from "./PresentationImg";
+import PresentationFooter from "./PresentationFooter";
 
 export default function PresentationContainer(): JSX.Element {
   const { data, loading } = useQuery(MY_PROJECTS);
@@ -30,6 +31,7 @@ export default function PresentationContainer(): JSX.Element {
             onClick={(e) => clickProjectTitle(e, project_id)}
           >
             <PresentationBar
+              clicked={projectNumber}
               title={project_name}
               key={project_id}
               id={project_id}
@@ -52,7 +54,9 @@ export default function PresentationContainer(): JSX.Element {
       <div className={styles.presentation__container}>
         {createPresentationImg()}
       </div>
-      <div className={styles.presentation__container}></div>
+      <div className={styles.presentation__container}>
+        <PresentationFooter />
+      </div>
     </div>
   );
 }

@@ -7,6 +7,7 @@ export default function Blog(): JSX.Element {
       <div className={style.blog__container}>
         <div className={style.blog__box}>
           <div className={style.blog__classification}>Announcement</div>
+          <div className={style.blog__dot}></div>
           <div className={style.blog__date}>19 September 2023</div>
         </div>
         <div className={style.blog__box}>

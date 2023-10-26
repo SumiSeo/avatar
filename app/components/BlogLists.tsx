@@ -3,7 +3,7 @@ import Blog from "./Blog";
 
 export default function BlogLists(): JSX.Element {
   return (
-    <div>
+    <div className={style.BlogLists}>
       <Blog />
     </div>
   );

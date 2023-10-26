@@ -10,6 +10,9 @@ export default function Navbar(): JSX.Element {
         </Link>
       </div>
       <div className={styles.nav__box}>
+        <Link className={styles.nav__link} href="/plog">
+          Plog
+        </Link>
         <Link className={styles.nav__link} href="/blog">
           Blog
         </Link>

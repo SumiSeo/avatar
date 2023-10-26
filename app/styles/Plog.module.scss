@@ -1,9 +1,9 @@
 @import "./variables";
 
-.blog {
+.plog {
   height: 95vh;
-  background-color: $default-white;
-  color: $default-black;
+  background-color: black;
+  color: $default-white;
   &__container {
     padding-left: 15rem;
   }

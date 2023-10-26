@@ -2,8 +2,9 @@
 
 .keepReading {
   display: flex;
+  padding-top: 4rem;
+  cursor: pointer;
   &__container {
-    margin-top: 1.4rem;
     font-size: 1.8rem;
     font-weight: 300;
     &:first-child {

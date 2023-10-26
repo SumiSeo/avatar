@@ -1,10 +1,16 @@
 import styles from "../styles/Blog.module.scss";
 import Header from "../components/Header";
+import BlogSelectToolbar from "../components/BlogSelectToolbar";
 
 export default function Blog(): JSX.Element {
   return (
     <div className={styles.blog}>
-      <Header title="Sumi Blog" />
+      <div className={styles.blog___container}>
+        <Header title="Sumi Blog" />
+      </div>
+      <div className={styles.blog___container}>
+        <BlogSelectToolbar />
+      </div>
     </div>
   );
 }

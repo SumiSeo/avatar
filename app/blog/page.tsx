@@ -1,6 +1,6 @@
 import styles from "../styles/Blog.module.scss";
 import Header from "../components/Header";
-import BlogSelectToolbar from "../components/BlogSelectToolbar";
+import BlogLists from "../components/BlogLists";
 
 export default function Blog(): JSX.Element {
   return (
@@ -9,7 +9,7 @@ export default function Blog(): JSX.Element {
         <Header title="Sumi Blog" />
       </div>
       <div className={styles.blog__container}>
-        <BlogSelectToolbar />
+        <BlogLists />
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { UserProvider } from "@auth0/nextjs-auth0/client";
 import { Nunito_Sans } from "next/font/google";
 import "./styles/globals.scss";
 import { ApolloWrapper } from "./utilities/apollo-wrapper";
@@ -26,14 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <UserProvider>
-        <body className={nunitoSans.className}>
-          <Navbar />
-          <ApolloWrapper>
-            <GlobalContextProvider>{children}</GlobalContextProvider>
-          </ApolloWrapper>
-        </body>
-      </UserProvider>
+      <body className={nunitoSans.className}>
+        <Navbar />
+        <ApolloWrapper>
+          <GlobalContextProvider>{children}</GlobalContextProvider>
+        </ApolloWrapper>
+      </body>
     </html>
   );
 }

@@ -5,6 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: { appDir: true },
 };
 
 const path = require("path");

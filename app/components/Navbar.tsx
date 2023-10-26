@@ -16,9 +16,6 @@ export default function Navbar(): JSX.Element {
         <Link className={styles.nav__link} href="/contact">
           Contact
         </Link>
-        <Link className={styles.nav__link} href="/signin">
-          Sign In
-        </Link>
       </div>
     </nav>
   );

@@ -23,12 +23,10 @@ export default function Blog({
       </div>
       <div className={style.blog__container}>
         <div className={style.blog__box}>
-          <div className={style.blog__summary}>
-            We are happy to announce that we’ve received approval from the
-            reviewing independent institutional review board and our first
-            hospital site to begin recruitment for our first-in-human clinical
-            trial.
-          </div>
+          <div className={style.blog__summary}>{`${content.slice(
+            0,
+            100
+          )}...`}</div>
         </div>
         <div className={style.blog__box}>
           <KeepReading />

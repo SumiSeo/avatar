@@ -24,7 +24,7 @@ export default function RootLayout({
   makeSuspenseCache: any;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <body className={nunitoSans.className}>
         <Navbar />
         <ApolloWrapper>

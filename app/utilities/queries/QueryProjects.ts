@@ -1,7 +1,7 @@
 import { gql, DocumentNode } from "@apollo/client";
 
 const QUERY_PROJECTS: DocumentNode = gql`
-  query query_projects {
+  query my_projects {
     my_projects(order_by: { project_id: asc }) {
       project_description
       project_id

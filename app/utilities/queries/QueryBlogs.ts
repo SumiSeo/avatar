@@ -7,6 +7,7 @@ const QUERY_BLOGS: DocumentNode = gql`
       date
       id
       title
+      content
     }
   }
 `;

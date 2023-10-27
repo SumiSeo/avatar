@@ -1,19 +1,24 @@
 import style from "../styles/components/Blog.module.scss";
+import { BlogProps } from "../types/BlogProps";
 import KeepReading from "./KeepReading";
 
-export default function Blog(): JSX.Element {
+export default function Blog({
+  content,
+  date,
+  classification,
+  id,
+  title,
+}: BlogProps): JSX.Element {
   return (
     <div className={style.blog}>
       <div className={style.blog__container}>
         <div className={style.blog__box}>
-          <div className={style.blog__classification}>Announcement</div>
+          <div className={style.blog__classification}>{classification}</div>
           <div className={style.blog__dot}></div>
-          <div className={style.blog__date}>19 September 2023</div>
+          <div className={style.blog__date}>{date}</div>
         </div>
         <div className={style.blog__box}>
-          <div className={style.blog__title}>
-            Neuralink's First-in-Human Clinical Trial is Open for Recruitment
-          </div>
+          <div className={style.blog__title}>{title}</div>
         </div>
       </div>
       <div className={style.blog__container}>

@@ -2,7 +2,7 @@
 
 import styles from "../styles/components/PresentationContainer.module.scss";
 import { useQuery } from "@apollo/client";
-import { MY_PROJECTS } from "../utilities/queries/MyProject";
+import { QUERY_PROJECTS } from "../utilities/queries/QueryProjects";
 import { MyProjectProps } from "../types/MyProject";
 import { useGlobalContext } from "../context/store";
 
@@ -12,7 +12,7 @@ import PresentationImg from "./PresentationImg";
 import PresentationFooter from "./PresentationFooter";
 
 export default function PresentationContainer(): JSX.Element {
-  const { data, loading } = useQuery(MY_PROJECTS);
+  const { data, loading } = useQuery(QUERY_PROJECTS);
   const { projectNumber, setProjectNumber } = useGlobalContext();
 
   if (loading) {

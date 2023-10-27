@@ -1,7 +1,7 @@
 import { gql, DocumentNode } from "@apollo/client";
 
-const MY_MISSIONS: DocumentNode = gql`
-  query MyMissions {
+const QUERY_MISSIONS: DocumentNode = gql`
+  query query_missions {
     my_mission(order_by: { mission_id: asc }) {
       mission_description
       mission_id
@@ -10,4 +10,4 @@ const MY_MISSIONS: DocumentNode = gql`
   }
 `;
 
-export { MY_MISSIONS };
+export { QUERY_MISSIONS };

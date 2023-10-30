@@ -1,5 +1,7 @@
 import style from "../styles/components/Blog.module.scss";
 import { BlogProps } from "../types/BlogProps";
+
+//components
 import KeepReading from "./KeepReading";
 
 export default function Blog({
@@ -29,7 +31,7 @@ export default function Blog({
           )}...`}</div>
         </div>
         <div className={style.blog__box}>
-          <KeepReading />
+          <KeepReading id={id} />
         </div>
       </div>
     </div>

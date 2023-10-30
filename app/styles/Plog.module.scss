@@ -1,0 +1,10 @@
+@import "./variables";
+
+.plog {
+  height: 95vh;
+  background-color: black;
+  color: $default-white;
+  &__container {
+    padding-left: 15rem;
+  }
+}

@@ -1,10 +1,16 @@
 import styles from "../styles/Blog.module.scss";
+import Header from "../components/Header";
+import BlogLists from "../components/BlogLists";
 
 export default function Blog(): JSX.Element {
   return (
     <div className={styles.blog}>
-      <h1>Coming soon...</h1>
-      <h3>Blog is under construction</h3>
+      <div className={styles.blog__container}>
+        <Header title="Sumi Blog" />
+      </div>
+      <div className={styles.blog__container}>
+        <BlogLists />
+      </div>
     </div>
   );
 }

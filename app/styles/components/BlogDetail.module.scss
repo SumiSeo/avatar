@@ -1,0 +1,51 @@
+@import "../variables";
+
+.blogDetail {
+  background-color: $default-white;
+  color: $default-black;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 45rem;
+
+  &__container {
+    &:first-child {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    &:nth-child(2) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__dot {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 1rem;
+    background-color: $default-black;
+    border-radius: 1rem;
+  }
+  &__classification {
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-right: 2rem;
+    background-color: $default-grey;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 1.4rem;
+  }
+  &__date {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  &__title {
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 7rem;
+  }
+  &__content {
+    font-size: 2rem;
+    line-height: 3.8rem;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@apollo/client";
-import { MY_PROJECTS } from "../utilities/queries/MyProject";
+import { MY_PROJECTS } from "../utilities/queries/QueryProjects";
 
 export default function PresentationLists(): JSX.Element {
   const { data, loading } = useQuery(MY_PROJECTS);

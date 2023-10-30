@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "../styles/components/AboutContainer.module.scss";
-import { MY_MISSIONS } from "../utilities/queries/MyMission";
+import { QUERY_MISSIONS } from "../utilities/queries/QueryMissions";
 import { useQuery } from "@apollo/client";
 import { useGlobalContext } from "../context/store";
 
@@ -12,7 +12,7 @@ import { MyMissionProps } from "../types/MyMission";
 
 export default function AboutContainer(): JSX.Element {
   const { missionNumber, setMissionNumber } = useGlobalContext();
-  const { data, loading } = useQuery(MY_MISSIONS);
+  const { data, loading } = useQuery(QUERY_MISSIONS);
   if (loading) {
     return <div>Loading...</div>;
   }

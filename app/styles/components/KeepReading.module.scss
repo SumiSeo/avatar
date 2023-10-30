@@ -1,0 +1,21 @@
+@import "../variables";
+
+.keepReading {
+  display: flex;
+  padding-top: 4rem;
+  cursor: pointer;
+  &__container {
+    font-size: 1.6rem;
+    font-weight: 300;
+    &:first-child {
+      margin-right: 0.4rem;
+      border-bottom: 1px solid $default-black;
+      padding-bottom: 0.3rem;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $default-black;
+}

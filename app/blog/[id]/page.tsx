@@ -5,12 +5,12 @@ import { QUERY_BLOG_DETAIL } from "@/app/utilities/queries/QueryBlogDeatil";
 import style from "../../styles/components/BlogDetail.module.scss";
 
 export default function BlogDetail({ params }: { params: any }): JSX.Element {
+  const id = params.id;
+  const { data } = useQuery(QUERY_BLOG_DETAIL, {
+    variables: { id: id },
+  });
+  console.log("data", data);
   const getTicket = (): JSX.Element => {
-    const id = params.id;
-    const { data } = useQuery(QUERY_BLOG_DETAIL, {
-      variables: { id: id },
-    });
-    console.log("data", data);
     return (
       data && (
         <div className={style.blogDetail}>

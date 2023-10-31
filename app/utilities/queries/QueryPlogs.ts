@@ -8,6 +8,7 @@ const QUERY_PLOGS: DocumentNode = gql`
       date
       id
       title
+      url
     }
   }
 `;

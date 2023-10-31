@@ -1,16 +1,28 @@
-import styles from "../styles/components/PlogLayout.module.scss";
+"use client";
 
+import styles from "../styles/components/PlogLayout.module.scss";
+import { QUERY_PLOGS } from "../utilities/queries/QueryPlogs";
+import { useQuery } from "@apollo/client";
+
+//comps
 import PlogImage from "./PlogImage";
 
 export default function PlogLayout(): JSX.Element {
-  return (
-    <div className={styles.plog}>
-      <div className={styles.plog__container}>
-        <div className={styles.plog__box}>
-          <PlogImage />
-        </div>
-      </div>
-      <div className={styles.plog__container}></div>
-    </div>
-  );
+  const { data, loading } = useQuery(QUERY_PLOGS);
+  if (loading) {
+    return <div>Loading...</div>;
+  } else console.log("data", data.plogs);
+  const createPlogImage = () => {
+    return (
+      data &&
+      data.plogs.map(({ title }: { title: string }) => {
+        return (
+          <div className={styles.plog__container}>
+            <PlogImage title={title} />
+          </div>
+        );
+      })
+    );
+  };
+  return <div className={styles.plog}>{createPlogImage()}</div>;
 }

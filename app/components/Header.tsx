@@ -4,7 +4,13 @@ import Link from "next/link";
 //comp
 import WriteIcon from "./WriteIcon";
 
-export default function Header({ title }: { title: String }): JSX.Element {
+export default function Header({
+  title,
+  link,
+}: {
+  title: String;
+  link: String;
+}): JSX.Element {
   return (
     <>
       <div className={styles.header}>{title}</div>
@@ -13,7 +19,7 @@ export default function Header({ title }: { title: String }): JSX.Element {
           <WriteIcon />
         </div>
         <div className={styles.write__container}>
-          <Link className={styles.write__link} href="/new-blog">
+          <Link className={styles.write__link} href={`/new-${link}`}>
             <div>Write</div>
           </Link>
         </div>

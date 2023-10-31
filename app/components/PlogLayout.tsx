@@ -10,7 +10,7 @@ export default function PlogLayout(): JSX.Element {
           <PlogImage />
         </div>
       </div>
-      <div className={styles.plog__container}>1</div>
+      <div className={styles.plog__container}></div>
     </div>
   );
 }

@@ -2,13 +2,7 @@ import sample from "../../public/fluuent.jpg";
 import Image from "next/image";
 import styles from "../styles/components/PlogImage.module.scss";
 
-export default function PlogImage({
-  title,
-  url,
-}: {
-  title: string;
-  url: string;
-}): JSX.Element {
+export default function PlogImage({ title }: { title: string }): JSX.Element {
   const id = 1;
   return (
     <div className={styles.plog}>

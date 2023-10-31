@@ -1,0 +1,9 @@
+@import "../variables";
+
+.plog {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 6rem 15rem;
+  color: $default-white;
+  font-size: 2rem;
+}

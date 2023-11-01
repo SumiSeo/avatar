@@ -1,0 +1,62 @@
+@import "../variables";
+
+.plog {
+  position: relative;
+  &__container {
+    &:hover {
+      background-color: $default-black;
+      opacity: 0.4;
+      transition: all 0.1s ease-in-out;
+      cursor: zoom-in;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    cursor: pointer;
+    div {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 0.44rem;
+      background-color: $default-grey;
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $default-black;
+    }
+  }
+
+  &__like {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 7.2rem;
+    margin-top: 2.5rem;
+  }
+
+  &__more {
+    position: absolute;
+    margin-top: 2.5rem;
+    top: 0;
+    right: 0;
+    margin-right: 3rem;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+    font-size: 2.4rem;
+    font-weight: 300;
+    &:hover {
+      color: $default-blue;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
+    }
+  }
+}

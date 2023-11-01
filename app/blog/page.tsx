@@ -6,7 +6,7 @@ export default function Blog(): JSX.Element {
   return (
     <div className={styles.blog}>
       <div className={styles.blog__container}>
-        <Header title="Sumi Blog" />
+        <Header title="Sumi Blog" link="blog" />
       </div>
       <div className={styles.blog__container}>
         <BlogLists />

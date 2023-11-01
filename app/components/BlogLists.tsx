@@ -1,6 +1,5 @@
 "use client";
 
-import style from "../styles/components/BlogLists.module.scss";
 import Blog from "./Blog";
 import { useQuery } from "@apollo/client";
 import { QUERY_BLOGS } from "../utilities/queries/QueryBlogs";
@@ -32,5 +31,5 @@ export default function BlogLists(): JSX.Element {
       })
     );
   };
-  return <div className={style.BlogLists}>{createBlogContainer()}</div>;
+  return <div>{createBlogContainer()}</div>;
 }

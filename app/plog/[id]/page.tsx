@@ -3,6 +3,7 @@
 import { useQuery } from "@apollo/client";
 import { QUERY_PLOG_DETAIL } from "@/app/utilities/queries/QueryPlogDetail";
 import style from "../../styles/components/BlogDetail.module.scss";
+import dateConversion from "@/app/utilities/funcs/DateConversion";
 
 export default function PlogDetail({ params }: { params: any }): JSX.Element {
   const id = params.id;
@@ -19,7 +20,9 @@ export default function PlogDetail({ params }: { params: any }): JSX.Element {
               {data.plogs[0].classification}
             </div>
             <div className={style.blogDetail__dot}></div>
-            <div className={style.blogDetail__date}>{data.plogs[0].date}</div>
+            <div className={style.blogDetail__date}>
+              {dateConversion(data.plogs[0].date)}
+            </div>
           </div>
           <div className={style.blogDetail__container}>
             <div className={style.blogDetail__title}>{data.plogs[0].title}</div>

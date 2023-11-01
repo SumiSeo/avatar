@@ -15,13 +15,15 @@ export default function PlogLayout(): JSX.Element {
   const createPlogImage = () => {
     return (
       data &&
-      data.plogs.map(({ title }: { title: string; url: string }) => {
-        return (
-          <div className={styles.plog__container}>
-            <PlogImage title={title} />
-          </div>
-        );
-      })
+      data.plogs.map(
+        ({ title, id }: { title: string; url: string; id: number }) => {
+          return (
+            <div key={id} className={styles.plog__container}>
+              <PlogImage title={title} />
+            </div>
+          );
+        }
+      )
     );
   };
   return <div className={styles.plog}>{createPlogImage()}</div>;

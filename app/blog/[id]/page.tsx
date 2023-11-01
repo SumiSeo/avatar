@@ -1,7 +1,7 @@
 "use client";
 
 import { useQuery } from "@apollo/client";
-import { QUERY_BLOG_DETAIL } from "@/app/utilities/queries/QueryBlogDeatil";
+import { QUERY_BLOG_DETAIL } from "@/app/utilities/queries/QueryBlogDetail";
 import style from "../../styles/components/BlogDetail.module.scss";
 
 export default function BlogDetail({ params }: { params: any }): JSX.Element {

@@ -19,7 +19,7 @@ export default function PlogLayout(): JSX.Element {
         ({ title, id }: { title: string; url: string; id: number }) => {
           return (
             <div key={id} className={styles.plog__container}>
-              <PlogImage title={title} />
+              <PlogImage id={id} title={title} />
             </div>
           );
         }

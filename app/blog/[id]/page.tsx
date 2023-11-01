@@ -1,15 +1,16 @@
 "use client";
 
 import { useQuery } from "@apollo/client";
-import { QUERY_BLOG_DETAIL } from "@/app/utilities/queries/QueryBlogDeatil";
+import { QUERY_BLOG_DETAIL } from "@/app/utilities/queries/QueryBlogDetail";
 import style from "../../styles/components/BlogDetail.module.scss";
+import dateConversion from "@/app/utilities/funcs/DateConversion";
 
 export default function BlogDetail({ params }: { params: any }): JSX.Element {
   const id = params.id;
   const { data } = useQuery(QUERY_BLOG_DETAIL, {
     variables: { id: id },
   });
-  console.log("data", data);
+
   const getTicket = (): JSX.Element => {
     return (
       data && (
@@ -19,7 +20,9 @@ export default function BlogDetail({ params }: { params: any }): JSX.Element {
               {data.blogs[0].classification}
             </div>
             <div className={style.blogDetail__dot}></div>
-            <div className={style.blogDetail__date}>{data.blogs[0].date}</div>
+            <div className={style.blogDetail__date}>
+              {dateConversion(data.blogs[0].date)}
+            </div>
           </div>
           <div className={style.blogDetail__container}>
             <div className={style.blogDetail__title}>{data.blogs[0].title}</div>

@@ -1,3 +1,6 @@
+"use clinet";
+
+import { useState } from "react";
 import sample from "../../public/fluuent.jpg";
 import Image from "next/image";
 import styles from "../styles/components/PlogImage.module.scss";
@@ -10,6 +13,7 @@ export default function PlogImage({
   title: string;
   id: number;
 }): JSX.Element {
+  const [heart, setHeart] = useState<boolean>(false);
   return (
     <div className={styles.plog}>
       <div className={styles.plog__container}>
@@ -21,7 +25,12 @@ export default function PlogImage({
         />
       </div>
       <div className={styles.plog__icons}>
-        <div className={styles.plog__like}>&#x2764;</div>
+        <div
+          onClick={() => setHeart(!heart)}
+          className={!heart ? styles.plog__like : styles.plog__dislike}
+        >
+          &#x2764;
+        </div>
         <Link href={`/plog/${id}`}>
           <div className={styles.plog__more}>&#x2b;</div>
         </Link>

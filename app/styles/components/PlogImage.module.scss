@@ -23,7 +23,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $default-black;
     }
   }
 
@@ -33,6 +32,15 @@
     right: 0;
     margin-right: 7.2rem;
     margin-top: 2.5rem;
+    color: $default-black;
+  }
+  &__dislike {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 7.2rem;
+    margin-top: 2.5rem;
+    color: $default-blue;
   }
 
   &__more {
@@ -43,6 +51,7 @@
     margin-right: 3rem;
     font-size: 3rem;
     font-weight: 300;
+    color: $default-black;
   }
 
   &__title {

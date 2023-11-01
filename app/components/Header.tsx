@@ -14,16 +14,16 @@ export default function Header({
   return (
     <>
       <div className={styles.header}>{title}</div>
-      <div className={styles.write}>
-        <div className={styles.write__container}>
+      {/* <div className={styles.write}> */}
+      {/* <div className={styles.write__container}>
           <WriteIcon />
         </div>
         <div className={styles.write__container}>
           <Link className={styles.write__link} href={`/new-${link}`}>
             <div>Write</div>
           </Link>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </>
   );
 }

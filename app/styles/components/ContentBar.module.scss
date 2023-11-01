@@ -1,5 +1,10 @@
 @import "../variables";
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .contentBar {
   cursor: pointer;
   margin-right: 10rem;
@@ -9,7 +14,7 @@
     height: 5rem;
     border-radius: 0.4rem;
     background-color: $default-black;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
     transition: all 0.2s ease-in-out;
   }
   &__box {
@@ -23,4 +28,23 @@
   &__active {
     opacity: 1;
   }
+}
+.content__circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  border: 1.6px solid $default-black;
+  border-radius: 1rem;
+  margin-bottom: 0.4rem;
+  margin-right: 10rem;
+}
+
+.content__nocircle {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  border: 1.6px solid $default-grey;
+  border-radius: 1rem;
+  margin-bottom: 0.4rem;
+  margin-right: 10rem;
 }

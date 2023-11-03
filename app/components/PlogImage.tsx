@@ -1,4 +1,4 @@
-"use client";
+"use clinet";
 
 import { useState } from "react";
 import sample from "../../public/fluuent.jpg";

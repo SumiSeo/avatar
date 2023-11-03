@@ -16,6 +16,7 @@ export default function PlogImage({
   const [heart, setHeart] = useState<boolean>(false);
   return (
     <div className={styles.plog}>
+      ㄴ
       <div className={styles.plog__container}>
         <Image
           objectFit="cover"
